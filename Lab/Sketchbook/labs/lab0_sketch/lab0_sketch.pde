@@ -1,22 +1,46 @@
-// this is an inline comment
-/* this is a 
-      multiline comment 
-            
-print("Welcome to EECS1710 F2022 saikoro");
-size(250,250);
-line(10,10,100,200);
-ellipse(100,100,40,80);
-      */
-      size(500, 500);
-      background(200,180,180);
-arc(100, 100, 80, 80, 0, HALF_PI);
-noFill();
-arc(100, 100, 110, 110, HALF_PI, PI);
-arc(100, 100, 120, 120, PI, PI+QUARTER_PI);
-arc(100, 100, 130, 130, PI+QUARTER_PI, TWO_PI);
+/*
+ print("Welcome to EECS1710 F2022 saikoro");
+ size(250,250);
+ line(10,10,100,200);
+ ellipse(100,100,40,80);
+ */
+int centerX, centerY;
+float a, b, c, d, e, f, g, h, k, x, y;
 
-fill(255,55,155,50);
-arc(100, 300, 120, 120, 0, PI+QUARTER_PI, OPEN);
+void setup() {
+  size(800, 800);
+  background(255);
+  centerX = width/2;
+  centerY = height/2;
+}
+
+void draw() {
+  noStroke();
+  fill(245, 155, 155, 50);
+  circle(centerX, centerY, 475);
+  fill(64,123,213, 120 );
+  circle(centerX, centerY, 120 );
+  fill(233,233);
+  circle(centerX ,centerY, 24 );
+  {
+    stroke(1);
+    x = 378;
+    k = 125;
+    y = 265;
 
 
-arc(300, 300, 120, 120, 0, PI+QUARTER_PI, CHORD);
+    for (int i=1; i<361; i+=1) {
+      a = radians(i);
+      b = radians(i-1);
+      c = a*x;
+      d = b*x;
+
+      e = (x-y)*cos(b)+k*cos(d);
+      f = (x-y)*sin(b)+k*sin(d);
+
+      g = (x-y)*cos(a)+k*cos(c);
+      h = (x-y)*sin(a)+k*sin(c);
+      line(centerX+e, centerY+f, centerX+g, centerY+h);
+    }
+  }
+}
