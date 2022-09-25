@@ -9,6 +9,26 @@
 // ======================================
 
 // [ 10 marks  ->  6 for functionality, 4 for aesthetic ]
+final float Tr = 0.2989;
+final float Tg = 0.5870;
+final float Tb = 0.1140;
+final float R0 = 500;
+final float Prop= 255; 
+
+int r, g, b ,y;
+r=200;
+g=168;
+b=88;
+
+float Pr,Pg,Pb;
+Pr=sqrt(r/Prop)*R0;
+Pg=sqrt(g/Prop)*R0;
+Pb=sqrt(b/Prop)*R0;
+
+
+size(500 , 500); 
+int centerX=width/2; 
+int centerY=height/2;
 
 // Notes:
 //   -> create a graphical representation of the levels of r,g,b
@@ -27,7 +47,6 @@
 //
 //   -> Marks will be given for aesthetic design of your visualization
 
-
 // FUNCTIONALITY - YOUR APPLICATION MUST:
 //
 //   -> include and use colour
@@ -39,59 +58,43 @@
 //       the current values assigned to the variables for r,g,b )
 //   -> show the resulting colour and luminance result in a graphical form
 //   -> display a new result when re-run for a different set of r,g,b values
-
-
        // you may modify this, but you need to create a window
-
-
-
-
 // INCLUDE CODE HERE FROM YOUR COMPLETED QUESTION 3 (that computes y from r,g,b)
 
 
+y = int(r*Tr+g*Tg+b*Tb);
 
+//println("The pixel (r = " + r + ", g = " + g + ", b = " + b + ") has a luminance of (y = " + y + ")");
+background(r,g,b);
+circle(centerX,centerY,max(Pr,Pb,Pg));
 
+noStroke();
+fill(y,y,y);
+arc(centerX, centerY, R0, R0, 0, PI/3);
+arc(centerX, centerY, R0, R0, 2*PI/3,PI);
+arc(centerX, centerY, R0, R0, 4*PI/3, 5*PI/3);
 
+fill(Prop,0,0);
+arc(centerX, centerY, Pr, Pr, 0, PI/3);
+fill(0,Prop,0);
+arc(centerX, centerY, Pg, Pg, 2*PI/3,PI);
+fill(0,0,Prop);
+arc(centerX, centerY, Pb, Pb, 4*PI/3, 5*PI/3);
+
+fill(y,y,y);
+circle(centerX, centerY, R0/6);
+
+textSize(25);
+fill(r,0,0);
+text("red:"+str(r),centerX+Pr/4,centerY-10);
+fill(0,g,0);
+text("green:"+str(g),centerX-Pg/2,centerY-10);
+fill(0,0,b);
+text("blue:"+str(b), centerX-30, centerY-Pb/2);
+fill(y,y,y);
+text("Luminance:"+str(y),centerX-R0/10,centerY+R0/8);
+fill(r,g,b);
+text("R,G,B", centerX-R0/24, centerY+(max(Pr,Pb,Pg)/2)-12);
 
 // INCLUDE CODE BELOW TO CREATE YOUR VISUALIZATION OF THE COLOUR COMBINATIONS USED TO COMPUTE
 // LUMINANCE ABOVE, AND THE RESULTING COLOURS & LUMINANCE (see lab1.pdf)
-int centerX, centerY;
-float a, b, c, d, e, f, g, h, k, x, y;
-
-void setup() {
-  size(800, 800);
-  background(255);
-  centerX = width/2;
-  centerY = height/2;
-}
-
-void draw() {
-  noStroke();
-  fill(245, 155, 155, 50);
-  circle(centerX, centerY, 475);
-  fill(64,123,213, 120 );
-  circle(centerX, centerY, 120 );
-  fill(233,233);
-  circle(centerX ,centerY, 24 );
-  {
-    stroke(1);
-    x = 378;
-    k = 125;
-    y = 265;
-
-
-    for (int i=1; i<361; i+=1) {
-      a = radians(i);
-      b = radians(i-1);
-      c = a*x;
-      d = b*x;
-
-      e = (x-y)*cos(b)+k*cos(d);
-      f = (x-y)*sin(b)+k*sin(d);
-
-      g = (x-y)*cos(a)+k*cos(c);
-      h = (x-y)*sin(a)+k*sin(c);
-      line(centerX+e, centerY+f, centerX+g, centerY+h);
-    }
-  }
-}
