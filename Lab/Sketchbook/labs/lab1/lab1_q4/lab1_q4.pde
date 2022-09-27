@@ -16,20 +16,65 @@ final float R0 = 500;
 final float Prop= 255; 
 
 int r, g, b ,y;
-r=200;
-g=168;
-b=88;
+r=80;
+g=210;
+b=120;
+y = int(r*Tr+g*Tg+b*Tb);
 
-float Pr,Pg,Pb;
+float Pr,Pg,Pb,Py;
 Pr=sqrt(r/Prop)*R0;
 Pg=sqrt(g/Prop)*R0;
 Pb=sqrt(b/Prop)*R0;
-
+Py=sqrt(y/Prop)*R0;
 
 size(500 , 500); 
 int centerX=width/2; 
 int centerY=height/2;
 
+
+//println("The pixel (r = " + r + ", g = " + g + ", b = " + b + ") has a luminance of (y = " + y + ")");
+background(Prop);
+fill(r,g,b);
+strokeWeight(12);
+stroke(y);
+circle(centerX,centerY,Py);
+
+fill(y,y,y);
+stroke(r,g,b);
+arc(centerX, centerY, R0, R0, 0, PI/3);
+arc(centerX, centerY, R0, R0, 2*PI/3,PI);
+arc(centerX, centerY, R0, R0, 4*PI/3, 5*PI/3);
+
+
+strokeWeight(5);
+fill(Prop,0,0);
+stroke(r,0,0);
+arc(centerX, centerY, Pr, Pr, 0, PI/3);
+fill(0,Prop,0);
+stroke(0,g,0);
+arc(centerX, centerY, Pg, Pg, 2*PI/3,PI);
+fill(0,0,Prop);
+stroke(0,0,b);
+arc(centerX, centerY, Pb, Pb, 4*PI/3, 5*PI/3);
+
+fill(y,y,y);
+stroke(r,g,b);
+circle(centerX, centerY, R0/6);
+
+textSize(25);
+fill(Prop,0,0);
+text("red:"+str(r),centerX+Pr/4,centerY-10);
+fill(0,Prop,0);
+text("green:"+str(g),centerX-Pg/2,centerY-10);
+fill(0,0,Prop);
+text("blue:"+str(b), centerX-30, centerY-Pb/2);
+fill(y,y,y);
+text("Luminance:"+str(y),centerX-R0/7, centerY+Py/2-27);
+fill(r,g,b);
+text("R,G,B", centerX-R0/24, centerY+Py/2+22);
+
+// INCLUDE CODE BELOW TO CREATE YOUR VISUALIZATION OF THE COLOUR COMBINATIONS USED TO COMPUTE
+// LUMINANCE ABOVE, AND THE RESULTING COLOURS & LUMINANCE (see lab1.pdf)
 // Notes:
 //   -> create a graphical representation of the levels of r,g,b
 //      the r,g,b colour that results, and the y equivalent
@@ -46,7 +91,6 @@ int centerY=height/2;
 //          arc(), circle(), ellipse(), rect(), square(), line(), triangle(), ...
 //
 //   -> Marks will be given for aesthetic design of your visualization
-
 // FUNCTIONALITY - YOUR APPLICATION MUST:
 //
 //   -> include and use colour
@@ -60,41 +104,3 @@ int centerY=height/2;
 //   -> display a new result when re-run for a different set of r,g,b values
        // you may modify this, but you need to create a window
 // INCLUDE CODE HERE FROM YOUR COMPLETED QUESTION 3 (that computes y from r,g,b)
-
-
-y = int(r*Tr+g*Tg+b*Tb);
-
-//println("The pixel (r = " + r + ", g = " + g + ", b = " + b + ") has a luminance of (y = " + y + ")");
-background(r,g,b);
-circle(centerX,centerY,max(Pr,Pb,Pg));
-
-noStroke();
-fill(y,y,y);
-arc(centerX, centerY, R0, R0, 0, PI/3);
-arc(centerX, centerY, R0, R0, 2*PI/3,PI);
-arc(centerX, centerY, R0, R0, 4*PI/3, 5*PI/3);
-
-fill(Prop,0,0);
-arc(centerX, centerY, Pr, Pr, 0, PI/3);
-fill(0,Prop,0);
-arc(centerX, centerY, Pg, Pg, 2*PI/3,PI);
-fill(0,0,Prop);
-arc(centerX, centerY, Pb, Pb, 4*PI/3, 5*PI/3);
-
-fill(y,y,y);
-circle(centerX, centerY, R0/6);
-
-textSize(25);
-fill(r,0,0);
-text("red:"+str(r),centerX+Pr/4,centerY-10);
-fill(0,g,0);
-text("green:"+str(g),centerX-Pg/2,centerY-10);
-fill(0,0,b);
-text("blue:"+str(b), centerX-30, centerY-Pb/2);
-fill(y,y,y);
-text("Luminance:"+str(y),centerX-R0/10,centerY+R0/8);
-fill(r,g,b);
-text("R,G,B", centerX-R0/24, centerY+(max(Pr,Pb,Pg)/2)-12);
-
-// INCLUDE CODE BELOW TO CREATE YOUR VISUALIZATION OF THE COLOUR COMBINATIONS USED TO COMPUTE
-// LUMINANCE ABOVE, AND THE RESULTING COLOURS & LUMINANCE (see lab1.pdf)
