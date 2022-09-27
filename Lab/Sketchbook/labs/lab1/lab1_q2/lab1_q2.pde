@@ -31,7 +31,7 @@ float timeBMIN = distance/velocityPersonB*MINS_PER_HOUR;
 int timeSave = int(timeAMIN - timeBMIN);
 
 println("The time for Person A to travel " + distance + "km @ " + velocityPersonA + "km/hr is " + timeTakenPersonA + " hours.");
-print("If travelling @ " + 112 + "km/hr, Person B will save " + timeSave + " minutes!");
+print("If travelling @ " + velocityPersonB + "km/hr, Person B will save " + timeSave + " minutes!");
 
 
 
