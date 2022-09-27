@@ -16,9 +16,9 @@ final float R0 = 500;
 final float Prop= 255; 
 
 int r, g, b ,y;
-r=80;
-g=210;
-b=120;
+r=225;
+g=120;
+b=70;
 y = int(r*Tr+g*Tg+b*Tb);
 
 float Pr,Pg,Pb,Py;
@@ -34,19 +34,20 @@ int centerY=height/2;
 
 //println("The pixel (r = " + r + ", g = " + g + ", b = " + b + ") has a luminance of (y = " + y + ")");
 background(Prop);
-fill(r,g,b);
-strokeWeight(12);
-stroke(y);
+fill(y);
+strokeWeight(9);
+stroke(r,g,b);
 circle(centerX,centerY,Py);
 
-fill(y,y,y);
-stroke(r,g,b);
+fill(r,g,b);
+stroke(y);
+strokeWeight(3);
 arc(centerX, centerY, R0, R0, 0, PI/3);
 arc(centerX, centerY, R0, R0, 2*PI/3,PI);
 arc(centerX, centerY, R0, R0, 4*PI/3, 5*PI/3);
 
 
-strokeWeight(5);
+strokeWeight(6);
 fill(Prop,0,0);
 stroke(r,0,0);
 arc(centerX, centerY, Pr, Pr, 0, PI/3);
@@ -57,8 +58,9 @@ fill(0,0,Prop);
 stroke(0,0,b);
 arc(centerX, centerY, Pb, Pb, 4*PI/3, 5*PI/3);
 
-fill(y,y,y);
-stroke(r,g,b);
+fill(r,g,b);
+stroke(y,y,y);
+strokeWeight(9);
 circle(centerX, centerY, R0/6);
 
 textSize(25);
@@ -67,11 +69,11 @@ text("red:"+str(r),centerX+Pr/4,centerY-10);
 fill(0,Prop,0);
 text("green:"+str(g),centerX-Pg/2,centerY-10);
 fill(0,0,Prop);
-text("blue:"+str(b), centerX-30, centerY-Pb/2);
+text("blue:"+str(b), centerX-30, centerY-Pb/2-10);
 fill(y,y,y);
-text("Luminance:"+str(y),centerX-R0/7, centerY+Py/2-27);
+text("Luminance:"+str(y),centerX-R0/7, centerY+Py/2+27);
 fill(r,g,b);
-text("R,G,B", centerX-R0/24, centerY+Py/2+22);
+text("R,G,B", centerX-R0/20, centerY+R0/7);
 
 // INCLUDE CODE BELOW TO CREATE YOUR VISUALIZATION OF THE COLOUR COMBINATIONS USED TO COMPUTE
 // LUMINANCE ABOVE, AND THE RESULTING COLOURS & LUMINANCE (see lab1.pdf)
