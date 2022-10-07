@@ -4,8 +4,8 @@
 //              render using parametrized objects
 // ======================================
 // Student ID: 
-// First Name:
-// EECS User Name (not password):
+// First Name: 
+// EECS User Name (not password): sa1kolo
 // ======================================
 
 final int NUM_OBJECTS = 4;      // variables to track num objects to draw
@@ -32,11 +32,11 @@ int numObjectsLeft;
 //    on the trail/path in the scene depicted in lab2.pdf.
 
 void renderBackground() {
-  background(255);
-  strokeWeight(10);
+  strokeWeight(20);
   stroke(255, 215,0);
   line(0,0,0,height);
   line(width,0,width,height);
+  strokeWeight(10);
   line(4*width/5,0,4*width/5,height);
   line(width/5,0,width/5,height);
   noStroke();
@@ -49,7 +49,6 @@ void renderBackground() {
   text("Stickman Boxing", width/8, height/8);
   // CODE TO RENDER BACKGROUND SCENE ELEMENTS HERE
 }
-
 
 void renderForeground(float x, float y, int radius, float z0, float z1, float z2,float z3, float z4,float z5) {
   stroke(0);
@@ -74,6 +73,13 @@ void setup() {
 }
 
 void draw() {
+    stroke(random(255),random(255),random(255),20);
+    line(mouseX, mouseY, 0, 0);
+    line(mouseX, mouseY, width, height);
+    line(mouseX, mouseY, width, 0);
+    line(mouseX, mouseY, 0, height);
+    line(mouseX, mouseY, 0, height/2);
+    line(mouseX, mouseY, width, height/2);
     if (numObjectsLeft < NUM_OBJECTS){
       float x = random(width/6, 5*width/6);
       float y = random(2*height/5, 4*height/5);
@@ -98,7 +104,8 @@ void draw() {
 
 
 
-void mousePressed() {  
+void mousePressed() { 
+   background(random(0,255));
    renderBackground();
   // CODE TO CLEAR FOREGROUND (repaint background)
    numObjectsLeft = 0;
