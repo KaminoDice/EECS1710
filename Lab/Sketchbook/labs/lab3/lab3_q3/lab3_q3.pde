@@ -60,9 +60,7 @@ void statusBar() {
   } else {
     text("[--]", 600, 590);
   }
-  canvas.endDraw();
 }
-
 
 void showMenu() {
   // copy over from question 2
@@ -102,8 +100,8 @@ void drawCanvas() {
       canvas.line(pX, pY, mx, my);
     }
   }
+  canvas.endDraw();
 }
-
 
 void draw() {
   // TO DO (i.e. you need to do something if isDrawing flag is true)
@@ -129,17 +127,17 @@ void cursorIndicator() {
 
 void mousePressed() {
   // copy over and modify from question 2
-  println("drawing mode is ON");
+  // println("button = " + mouseButton );
   if (mouseButton == LEFT) {
+    println("drawing mode is ON");
     isDrawing = true;
   }
-  // println("button = " + mouseButton );
   if (mouseButton == 39 && standardPen) {
     standardPen = false;
-    println("standardPen is OFF");
+    println("\nstandardPen is OFF");
   } else if (mouseButton == 39 && !standardPen) {
     standardPen = true;
-    println("standardPen is ON");
+    println("\nstandardPen is ON");
   }
 }
 
@@ -154,13 +152,13 @@ void mouseReleased() {
 void keyPressed() {
   // copy over and modify from question 2
   if ((key == 'm' || key == 'M') && !isMirrored) {
-    println("mirror mode is ON");
+    println("\nmirror mode is ON");
     isMirrored = true;
   } else if ((key == 'm' || key == 'M') && isMirrored) {
-    println("mirror mode is OFF");
+    println("\nmirror mode is OFF");
     isMirrored = false;
   } else if (key == 'c' || key == 'C') {
-    println("clearing draw area" );
+    println("\nclearing draw area" );
     clearDrawArea();
     canvas.background(WHITE, 0);
   } else if (key == 'h' || key == 'H') {
