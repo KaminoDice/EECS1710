@@ -5,7 +5,7 @@
 // First Name:
 // EECS User Name (not password):
 // ======================================
-
+PGraphics canvas;
 
 // [ 12 marks ]
 
@@ -23,7 +23,11 @@ int penSize = 5;
 int pX,pY,mx,my;
 
 void setup() {
-  size(600, 600);
+  size(600, 600, P2D);
+  canvas = createGraphics(600,600, JAVA2D);
+  canvas.beginDraw();
+  canvas.smooth();
+  canvas.endDraw(); 
   clearDrawArea();
   println("type 'h' at any time for help\n");
   statusBar();
@@ -56,6 +60,7 @@ void statusBar(){
   }else{
     text("[--]",600,590);
   }
+  canvas.endDraw();
 }
 
 
@@ -75,42 +80,59 @@ void clearDrawArea() {
   background(SHADOW);
   fill(WHITE);
   noStroke();
-  rect( 20, 20, 560, 500, 5);
+  rect( 20, 20, 560, 530, 5);
   fill(0);
 }
 
-
-
-void draw() {
-   // TO DO (i.e. you need to do something if isDrawing flag is true)
-  pX = constrain(pmouseX, 20+penSize/2, 580-penSize/2);
-  pY = constrain(pmouseY, 20+penSize/2, 520-penSize/2);
-  mx = constrain(mouseX, 20+penSize/2, 580-penSize/2);
-  my = constrain(mouseY, 20+penSize/2, 520-penSize/2);
-  statusBar();
-  //if (isDrawing && mouseX<580-penSize/2 && mouseX >20+penSize/2 && mouseY<520-penSize/2 && mouseY>20+penSize/2){
+void drawCanvas(){
+  canvas.beginDraw();
+  //if (isDrawing && mouseX<580-penSize/2 && mouseX >20+penSize/2 && mouseY<550-penSize/2 && mouseY>20+penSize/2){
   if (isDrawing){
     if(standardPen){
-      stroke( BLACK );
+      canvas.stroke( BLACK );
     } else{
-      stroke ( RED );
+      canvas.stroke ( RED );
     }
-    strokeWeight(penSize);
+    canvas.strokeWeight(penSize);
     if(isMirrored){
-      line(pX, pY, mx , my);
-      stroke(SHADOW);
-      line(580-penSize/2-pX , pY,580-penSize/2-mx, my);
+      canvas.line(pX, pY, mx , my);
+      canvas.stroke(SHADOW);
+      canvas.line(580-penSize/2-pX , pY,580-penSize/2-mx, my);
     }else{
-      line(pX, pY, mx , my);
+      canvas.line(pX, pY, mx , my);
     }
   }
 }
 
 
+void draw() {
+   // TO DO (i.e. you need to do something if isDrawing flag is true)
+  pX = constrain(pmouseX, 20+penSize/2, 580-penSize/2);
+  pY = constrain(pmouseY, 20+penSize/2, 550-penSize/2);
+  mx = constrain(mouseX, 20+penSize/2, 580-penSize/2);
+  my = constrain(mouseY, 20+penSize/2, 550-penSize/2);
+  clearDrawArea();
+  statusBar();
+  cursorIndicator();
+  drawCanvas();
+  image(canvas,0,0);
+}
+
+void cursorIndicator(){
+  if (mouseButton == LEFT){
+    noFill();
+    stroke(SHADOW);
+    strokeWeight(3);
+    circle(mx,my,penSize*3);
+  }
+}
+
 void mousePressed() {
   // copy over and modify from question 2
   println("drawing mode is ON");
-  isDrawing = true;
+  if (mouseButton == LEFT){
+    isDrawing = true;
+  }
   // println("button = " + mouseButton );
   if (mouseButton == 39 && standardPen){
     standardPen = false;
@@ -123,8 +145,11 @@ void mousePressed() {
 
 void mouseReleased() {
   // copy over and modify from question 2
-  println("drawing mode is OFF");
-  isDrawing = false;
+  if(mouseButton == LEFT){
+    println("drawing mode is OFF");
+    isDrawing = false;
+  }
+
 }
 
 void keyPressed() {
@@ -138,6 +163,7 @@ void keyPressed() {
   } else if (key == 'c' || key == 'C'){
     println("clearing draw area" );
     clearDrawArea();
+    canvas.background(WHITE,0);
   } else if (key == 'h' || key == 'H'){
     showMenu();
   } else if (key == '+' && penSize<100){
