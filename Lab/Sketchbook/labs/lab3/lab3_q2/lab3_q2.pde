@@ -31,7 +31,6 @@ void showMenu() {
  println("press 'c' to  clear the drawing" );
  println("press 'm' to toggle mirrored mode");
  println("press 'h' to show this message" );
-
 }
 
 void draw() { 
@@ -39,11 +38,12 @@ void draw() {
   
 }
 
-
 void mousePressed() {
   // TO DO
-  println("drawing mode is ON");
   println("button = " + mouseButton );
+  if (mouseButton == 37){
+    println("drawing mode is ON");
+  }
   if (mouseButton == 39 && standardPen){
     standardPen = false;
     println("standardPen is OFF");
@@ -55,7 +55,9 @@ void mousePressed() {
 
 void mouseReleased() {
   // TO DO
-  println("drawing mode is OFF");
+  if (mouseButton == 37){
+    println("drawing mode is OFF");
+  }
 }
 
 void keyPressed() {
