@@ -54,7 +54,7 @@ void setup() {
 
   // QUESTION 2 methods (uncomment the following to run question2() - which calls methods)
   // =======================
-  // question2();
+  question2();
 
 
   // QUESTION 3 methods
