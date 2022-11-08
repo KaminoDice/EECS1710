@@ -12,8 +12,8 @@ String sentence = "Hello there, how are you?";
 
 char[] sentenceChars = sentence.toCharArray();
 
-//println(sentence);
-//println(sentenceChars);
+println(sentence);
+println(sentenceChars);
 
 // lets count the number of 'e's in the sentence:
 
