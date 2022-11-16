@@ -1,0 +1,1712 @@
+SPEAKER 0
+Okay, you're gonna make a start guys. Mhm. Okay. Um Alright, let's make a start I think where I
+
+SPEAKER 1
+got up to in the last lecture I was talking about um I started to look at example where were I was talking about unpacking color guys, if you're coming in, just quiet and down as you're coming in.
+
+SPEAKER 0
+Um and I started to look at this example and
+
+SPEAKER 1
+I was editing some code and it wasn't running, I had two versions of it and I was editing the
+
+SPEAKER 2
+wrong one that was running.
+
+SPEAKER 0
+Um So I wanted to start back there and continue
+
+SPEAKER 1
+going over this.
+
+SPEAKER 0
+Um So we're talking about the idea of using set
+
+SPEAKER 1
+and get get as a method to access a pixel
+
+SPEAKER 0
+right on an image And after we've created AP image
+
+SPEAKER 1
+and loaded one in we can access its pixel by using its um get method and we can set its pixels by using the set method.
+
+SPEAKER 0
+But we're talking about the fact that the values that
+
+SPEAKER 1
+are stored are these packed integers. And we spend a little bit of time in the last lecture talking about how the RGB is actually stored into that integer value.
+
+SPEAKER 2
+Right? So there were there were eight bits at different Places
+
+SPEAKER 1
+in this 32 bit um value where the red part was stored versus the green part versus the blue part.
+
+SPEAKER 2
+And there was another eight bits that's allocated for the alpha channel which is only ever used if you've if
+
+SPEAKER 1
+you've actually create an image that has um Alpha enabled.
+
+SPEAKER 2
+So most of the time alpha is ignored unless you specify the Alpha is enabled. So if you're creating images, um you can create them
+
+SPEAKER 1
+with these different modes.
+
+SPEAKER 0
+So we've Got two RGB images and if you specify
+
+SPEAKER 1
+the mode as a RGB, it's gonna have the Alpha
+
+SPEAKER 0
+channel um or it's going to care about the Alpha
+
+SPEAKER 2
+channel will be enabled on that image.
+
+SPEAKER 0
+So when you actually try to paint that image to the application window for for instance or even save it,
+
+SPEAKER 2
+it'll save with that with that alpha channel.
+
+SPEAKER 0
+Um There's another one um called Alpha only where the
+
+SPEAKER 1
+whole image is basically interpreted as just an alpha value.
+
+SPEAKER 2
+Right? So it's like a grayscale image but um it's only the Alpha channel that that is interpreted.
+
+SPEAKER 0
+Okay, all right. Um Right.
+
+SPEAKER 1
+So accessing pixels, we looked very briefly at using this nested loop to go through all of the pixels in width. Now we're looking at the width here, not of the application window, but we're looking at the width of the image that we want to operate on.
+
+SPEAKER 0
+So All of these operations are being done directly on
+
+SPEAKER 1
+three different images that we've created here.
+
+SPEAKER 0
+Um and actually we're synthesizing an image.
+
+SPEAKER 2
+So we're not looking at any image that we've loaded in at all. We're just creating colors and then we're using set to set them. So I mean in the in the actual code that have uploaded the red color is defined as a as a constant, but these colors are being generated here according
+
+SPEAKER 0
+to the loop variables. So the 1st 1, so image one is just set
+
+SPEAKER 2
+to read. Alright, so that's just going to give a red, red square and now we're in a ridiculously large font mode,
+
+SPEAKER 0
+so hopefully I don't get lost here. Alright, so I should turn discord off keeps beeping.
+
+SPEAKER 2
+Um if you're posting rude messages, I'll scroll over and they'll be in the don't know post.
+
+SPEAKER 1
+Alright, so we set these values but then we're just going to look at one of them, right? So I'm just gonna paint the result after setting all
+
+SPEAKER 2
+the pixels to read and all were going to get here, is that top left red um image.
+
+SPEAKER 1
+Now the image here is based on the size that we specified when we created that that image object, it's
+
+SPEAKER 2
+not necessarily based on um the size of the application window. Okay. And we're using corner mode when we um when we
+
+SPEAKER 1
+display the image.
+
+SPEAKER 2
+And so we're specifying the top left corner of where we want to put that image. So it's An image of 300 x three 100.
+
+SPEAKER 0
+We've set all the pictures to read and we've placed
+
+SPEAKER 1
+it or we've painted it into the top left hand
+
+SPEAKER 0
+corner, right. So the next one, the next one here where we're
+
+SPEAKER 1
+going through and we're gonna set a gradient, right? So this one doesn't have an alpha channel, so we specify a color if we specify a color with three variables, it's just RGB if we specify a color with 1/4 variable then at the alpha channel.
+
+SPEAKER 2
+So here we're doing a gradient.
+
+SPEAKER 1
+Why is it a gradient?
+
+SPEAKER 0
+Well, i is increasing as we go across the image, right? It doesn't matter what jay is doing as we go
+
+SPEAKER 1
+across the image from this way, right, for you, right From I equals zero through to the width, we're gonna increase or we're gonna sign that value of I and That's going to go up to three 100 isn't it?
+
+SPEAKER 0
+Um And so anything over 255 is just going to
+
+SPEAKER 1
+be clipped At at 2:55, it's not gonna be um
+
+SPEAKER 2
+it's not going to go beyond that.
+
+SPEAKER 1
+Right? So, so this image here is going to um sorry,
+
+SPEAKER 2
+the bottom image, we're gonna place this in the bottom, we're Gonna place this at 303 100.
+
+SPEAKER 0
+Right?
+
+SPEAKER 2
+So let's let's look at that happening this time.
+
+SPEAKER 0
+Alright, let's look at uh image to Right, This is
+
+SPEAKER 2
+the one we're generating?
+
+SPEAKER 1
+Right, and we see that it's a gradient in the horizontal direction. It's starting from black.
+
+SPEAKER 0
+Why is it starting from black, do you think?
+
+SPEAKER 1
+What is, What does it tell you that?
+
+SPEAKER 2
+It's starting from black, like we never signed black anywhere, did we?
+
+SPEAKER 0
+Or did we?
+
+SPEAKER 1
+Well, when I is Equal to 0 to be black,
+
+SPEAKER 0
+Right, yep, and then it's gradually increasing beyond black towards
+
+SPEAKER 2
+red because we're only setting the red channel.
+
+SPEAKER 0
+Right? So so we're going to get this sort of dark,
+
+SPEAKER 1
+dark red all the way through.
+
+SPEAKER 0
+Okay, now if I wanted the gradient to go in
+
+SPEAKER 1
+the other direction um I'd be using the J.
+
+SPEAKER 2
+Variable because that's sort of indicating where I am in, in the Y position.
+
+SPEAKER 1
+Alright. Um so Let's look at the last one and individually
+
+SPEAKER 2
+first.
+
+SPEAKER 0
+Thank you.
+
+SPEAKER 2
+Don't mind those apartment. Um Okay So the last one uh this image we're
+
+SPEAKER 1
+actually so we're varying on two things here.
+
+SPEAKER 2
+Okay, so we're using J which is increasing as we
+
+SPEAKER 1
+go down the image.
+
+SPEAKER 0
+Okay, so we're increasing which channel? The green channel?
+
+SPEAKER 1
+Right? The second one is the green channel, so we're making it more and more pure green, it's gonna start at black but at the same time we're increasing in the
+
+SPEAKER 0
+X direction on the alpha channel. So alpha Value of 2 50 five is opaque, just
+
+SPEAKER 2
+means whatever color it is in the other channels, it's
+
+SPEAKER 0
+going to be opaque, not transparent but The closer to
+
+SPEAKER 1
+zero it is the more transparent, it's going to be
+
+SPEAKER 2
+right and somewhere in between is gonna give you some
+
+SPEAKER 1
+level of transparency and you only really see this when you draw this image over the top of something else.
+
+SPEAKER 2
+Okay, so let's look at that image on its own,
+
+SPEAKER 0
+right?
+
+SPEAKER 1
+So you see that there is a color gradient going in the J direction, right?
+
+SPEAKER 2
+Which is this green, black to green in increasing jay. So jay is getting bigger in this way that's the positive Y direction. And we see that why i is growing from zero
+
+SPEAKER 1
+trans zero alpha two full alpha 2 55 or 300.
+
+SPEAKER 2
+But it only it doesn't really interpret anything over 2 55.
+
+SPEAKER 0
+Right? So so you can sort of see there's some transparency
+
+SPEAKER 1
+there because the background is gray but then you fully
+
+SPEAKER 2
+notice this when we overlay images together. Okay, so if I have the first image and there
+
+SPEAKER 0
+and I play that then I can see um that
+
+SPEAKER 2
+you know most of this red image will shine through um this one even though this one was the last one to be drawn, yep, I yeah Um the IMJ
+
+SPEAKER 1
+is still going up to 300 but you if you assign values that are outside of the range, they'll just
+
+SPEAKER 2
+yeah, when it goes to print those images out there being cropped basically.
+
+SPEAKER 1
+So it's a good question because if you think about the way the integer is stored, those bits can only
+
+SPEAKER 2
+Represent up to 2 50 five.
+
+SPEAKER 0
+So numbers but integers can represent larger numbers in that
+
+SPEAKER 2
+right? Or floats can represent larger numbers than that but they
+
+SPEAKER 1
+will be converted into the eight bit equivalent which will Be full to 50 5-plus extra to get up to
+
+SPEAKER 2
+300, which are additional bits which are lost.
+
+SPEAKER 0
+Right?
+
+SPEAKER 2
+So so that you you'll lose that information, but I mean it's sufficient here. We we basically reach full green And full alpha um at 2:55. And then and then it's solid from there.
+
+SPEAKER 0
+Right?
+
+SPEAKER 2
+Um I don't know why I'm getting the beach ball of death. But anyway, I think something did I did I accidentally hit the keyboard. That could have happened.
+
+SPEAKER 0
+Alright.
+
+SPEAKER 1
+So so you see that when it paints over.
+
+SPEAKER 0
+Alright.
+
+SPEAKER 1
+So that's how we generate gradients in the in the lab, you're going to be generating a type of mask.
+
+SPEAKER 0
+I don't know how far you got in the lab
+
+SPEAKER 2
+for those who are working on it, you'll be generating
+
+SPEAKER 1
+like a radial um gradient. Okay, now we're building the gradient manually with the variable
+
+SPEAKER 2
+i because it's changing.
+
+SPEAKER 0
+Right?
+
+SPEAKER 1
+Another way to build the gradient is actually two Linnean linearly interpolate on a variable.
+
+SPEAKER 2
+So you've Got two extremes of the variable and you
+
+SPEAKER 1
+want to pick a percentage in between them and that will interpolate um You know, according to the percentage, how much of each is contributing to that value. So if I'm going between 10 and a 100.
+
+SPEAKER 0
+Okay.
+
+SPEAKER 1
+And I have 90%.
+
+SPEAKER 0
+Then I'm going to be picking a value of around
+
+SPEAKER 2
+90 on that variable.
+
+SPEAKER 0
+Right? The that interpolation can go for other properties as well, right? Um And there's there is a version of this interpolation
+
+SPEAKER 2
+method uh that will interpolate between colors.
+
+SPEAKER 1
+Now colors are these three or potentially four variable values.
+
+SPEAKER 2
+Right.
+
+SPEAKER 0
+So, um so the methods that we typically use here, I don't know why it keeps jumping, jumping out of
+
+SPEAKER 2
+that. But anyway, the methods that we typically use here, look
+
+SPEAKER 1
+if we're working on a single variable, right? And when we look at the help for for these, you basically pick the start of the range, the end of The range and some percentage value.
+
+SPEAKER 2
+Some value between zero and one.
+
+SPEAKER 0
+Right?
+
+SPEAKER 2
+That represents where on that range you want to actually um return a value.
+
+SPEAKER 0
+Right?
+
+SPEAKER 2
+So you can automatically so you could use I write
+
+SPEAKER 0
+if you wanted to set this thing between zero and
+
+SPEAKER 2
+2 55, you could use I as a percentage of
+
+SPEAKER 0
+the width. Right? So I on 300 in our case. Um and the extreme values of zero and 255, and
+
+SPEAKER 1
+it would pick a value on that range accordingly.
+
+SPEAKER 0
+Right, Okay.
+
+SPEAKER 1
+Um then there's a version of this method, this is called look it's linear.
+
+SPEAKER 2
+Um interpolation short for you'll see this in many different
+
+SPEAKER 0
+um uh You see this function across many different languages
+
+SPEAKER 2
+in many different environments. So if you're doing game development, you'll see it a
+
+SPEAKER 0
+lot anywhere where we do animation.
+
+SPEAKER 1
+You'll see this lurk function a lot because usually we
+
+SPEAKER 2
+have key frames and we want to we don't want to figure out all the steps in between but we specify a start and an end of something. And then this linear interpolation will figure out all the steps in between.
+
+SPEAKER 0
+And we use a loop or something to keep calling
+
+SPEAKER 2
+it to generate this stuff.
+
+SPEAKER 0
+So in this particular case we can get that same
+
+SPEAKER 1
+gradient now um in opaque form by picking.
+
+SPEAKER 0
+And incidentally this can be done on an alpha value
+
+SPEAKER 2
+as well, our color with an alpha value.
+
+SPEAKER 1
+And if we specify a start color, like a from color and a two color, right? Starting color and A two color.
+
+SPEAKER 2
+Um We can put them into the lab color method which does this between colors. And we can pick a percentage of the width that
+
+SPEAKER 0
+way. Right?
+
+SPEAKER 1
+And so each time this gets cold right?
+
+SPEAKER 0
+With a certain value of I and J. It's going to set um a percentage of the width
+
+SPEAKER 1
+As as um so when it's 0% it'll be closer to the from color and when it's Closer to 100
+
+SPEAKER 2
+it'll be closer to the two color.
+
+SPEAKER 0
+Right?
+
+SPEAKER 2
+So it interpolate for you between those because That's if
+
+SPEAKER 0
+you've got three or 4 values there. Um Well you could do it, you have to do
+
+SPEAKER 2
+it on each one of the values but it's kind of annoying. Right? So there's something already set up for you to do that and you'll get sort of a result. That is alright.
+
+SPEAKER 0
+Um Okay, so the next thing is that we can we can access and modify pixels from a preloaded.
+
+SPEAKER 1
+So we've been talking about synthesizing images but we can do the exactly same operations on image pixels that we've
+
+SPEAKER 2
+loaded in from from an image.
+
+SPEAKER 0
+So in this particular case again my preference would be
+
+SPEAKER 1
+for most of you to stick to this way of
+
+SPEAKER 0
+uh iterating over an image with this, with this nested
+
+SPEAKER 2
+loop. Now there is another way to iterate over pixels, that's
+
+SPEAKER 1
+a one dimensional way.
+
+SPEAKER 2
+Um But you have to interpret where your index is to understand where this is in two dimensions on an image right? Which can get a little bit confusing. Um It's much easier to do it do things this way. So you're always thinking in two dimensions.
+
+SPEAKER 0
+Alright.
+
+SPEAKER 1
+So in this particular case um say we just wanted
+
+SPEAKER 0
+to modify the pixels in the left half right. So I want to modify them explicitly.
+
+SPEAKER 1
+Um Inside my loop while my I. Variable is in the left hand side.
+
+SPEAKER 2
+So it has a value of up to and not including width on two.
+
+SPEAKER 0
+Right? So Everything from 0 to within two, I don't care
+
+SPEAKER 1
+what the j value is doing, right.
+
+SPEAKER 0
+I use the I.
+
+SPEAKER 1
+N. J. Values to pick out the colors and I use these
+
+SPEAKER 2
+red green blue methods again and then I want to
+
+SPEAKER 1
+set, I want to modify them so I have to
+
+SPEAKER 0
+extract all the color channels out separately to modify it.
+
+SPEAKER 2
+It's very difficult to do the modification.
+
+SPEAKER 1
+You can but it's kind of it's not as easy to understand how to modify that integer variable directly.
+
+SPEAKER 2
+You can do it. But it's easier to pull those color channels out and
+
+SPEAKER 1
+then even if you're not modifying them, load them back
+
+SPEAKER 2
+in. If you're only modifying one of the channels for instance.
+
+SPEAKER 1
+So, say you wanted to give a red tint to
+
+SPEAKER 2
+um to this particular image on this side.
+
+SPEAKER 0
+Right. What you could do is um basically keep the red
+
+SPEAKER 1
+value and get rid of the blue and green values,
+
+SPEAKER 0
+right?
+
+SPEAKER 1
+So you still got variation in your red values according
+
+SPEAKER 2
+to what's in the image, but you don't have any
+
+SPEAKER 1
+green or blue. And so the image will still have the structure but will appear red, reddish, not opaquely red, but it'll appear you'll still get the variation, so you'll still still see
+
+SPEAKER 2
+the objects. Um Let's let's try a couple of manipulations here. Um All right. Let me make sure I'm calling the right thing here. Alright. And um we're gonna run this.
+
+SPEAKER 1
+The first manipulation is just I'm just gonna darken everything.
+
+SPEAKER 2
+So I'm gonna have the existing channels whatever values they
+
+SPEAKER 1
+are, I still want them to keep their relationship, but I want them to be closer to black.
+
+SPEAKER 0
+So if I have them, that brings all of those
+
+SPEAKER 2
+values down closer to something that's that's black, which is dark, Right?
+
+SPEAKER 0
+So I'll get this type of appearance.
+
+SPEAKER 2
+But what if I what if I um I wanted to keep the red channel and I just wanted to get rid of these channels, Right? So zero out those channels, so I can still see
+
+SPEAKER 1
+the structure and the image because the red values are changing according to you know they have a brightness according
+
+SPEAKER 2
+to what's in that particular image. So I can still see what's going on.
+
+SPEAKER 1
+This is a very useful way to mask something that
+
+SPEAKER 2
+you want to, so say you're using the mouse and you wanna mask an area of the image that you want to use for something.
+
+SPEAKER 0
+It's a very good way of like generating a little
+
+SPEAKER 2
+mask. So you can see where you're selecting on an image before you extract those pixels and do something with them, right? Or you've seen you've seen the we've seen websites where
+
+SPEAKER 1
+you've got before and after you see this with ads
+
+SPEAKER 2
+for TVs or ads for video cards or something, you know you've got with our technology and on one side you see this clear sharp picture and then without our technology on the other side you see this, you know, blurry crappy picture. Right?
+
+SPEAKER 1
+Same picture. And you're building a slider, you could you could actually
+
+SPEAKER 0
+attach that if um that if test not to the
+
+SPEAKER 1
+width of the image but to the mouse position, the
+
+SPEAKER 2
+X mouse position for instance.
+
+SPEAKER 0
+And if of course you'd have to put that in
+
+SPEAKER 2
+a draw loop so it's constantly painting the image but
+
+SPEAKER 1
+as you move the mouse, you could be changing the
+
+SPEAKER 2
+slider back and forth and manipulating the image underneath. Alright. Um Okay. I'm gonna I'm gonna show you some filtering stuff on that other window which I I'm not going to put in the side because it's all there in the help.
+
+SPEAKER 1
+So there's an alternative to um to using the get and the set.
+
+SPEAKER 0
+Right.
+
+SPEAKER 1
+These methods are convenient.
+
+SPEAKER 0
+They use the indexes that we understand as a position
+
+SPEAKER 1
+in the image.
+
+SPEAKER 2
+So we don't get confused.
+
+SPEAKER 1
+Um But sometimes we just want to do a common operation on all of the pixels and like we don't need we don't really care about I versus J.
+
+SPEAKER 0
+Right?
+
+SPEAKER 1
+We're going to go through every pixel and do some
+
+SPEAKER 2
+common operation, right?
+
+SPEAKER 1
+It's not based on spatial position at all.
+
+SPEAKER 0
+Right.
+
+SPEAKER 1
+In this particular example it is based on spatial position because we need to know um you know where the range of i is that we're interested in making a change and that's a spatial position.
+
+SPEAKER 0
+Right? But if I did this read to all of the
+
+SPEAKER 1
+pixels.
+
+SPEAKER 2
+Okay.
+
+SPEAKER 0
+Um I don't care whether where I or J is.
+
+SPEAKER 1
+I'm just going to zero all of the green and all of the blue channels no matter where the where the pixel is.
+
+SPEAKER 0
+Right? So there is a convenient um way that you can
+
+SPEAKER 1
+extract a one dimensional array of these integers, right?
+
+SPEAKER 0
+That represent colors.
+
+SPEAKER 1
+So the pixels, the elements of them are the integers
+
+SPEAKER 2
+that represent colors.
+
+SPEAKER 0
+And you do that by calling a method load pixels. So load pixels will make this pixel array available.
+
+SPEAKER 1
+You can call load pixels on um on the application
+
+SPEAKER 0
+window. So to do that you don't invoke it from an
+
+SPEAKER 1
+image or you can call it on a specific image and it'll make a pixels array available as an attribute
+
+SPEAKER 2
+of that image.
+
+SPEAKER 0
+Um And once it's available you can just go through
+
+SPEAKER 1
+that array and make the changes. You still have to pull the color channels out and manipulate them and put them back.
+
+SPEAKER 0
+Right?
+
+SPEAKER 1
+But you don't have to use set and get you can just assign the color values back to those array
+
+SPEAKER 2
+positions directly.
+
+SPEAKER 0
+Um So just a quick example of that for the
+
+SPEAKER 2
+same for the same image here.
+
+SPEAKER 0
+Right. So if I had my image now in this case
+
+SPEAKER 1
+I'm working on the image object.
+
+SPEAKER 0
+So I load the pixels. I call that method on the object and load those
+
+SPEAKER 1
+pixels and make that pixel array pixels array available for that object to access it. I have to access it through the object.
+
+SPEAKER 0
+Okay. Um Okay so I'm I'm looking I'm using this I
+
+SPEAKER 1
+n j I don't need to do that though.
+
+SPEAKER 0
+Um I could have a single well okay this is
+
+SPEAKER 2
+a different operation isn't it? So let's modify this let's modify it.
+
+SPEAKER 0
+All right.
+
+SPEAKER 2
+Very sensitive.
+
+SPEAKER 0
+Let's get rid of this.
+
+SPEAKER 1
+We're going to do this to everything Whoops.
+
+SPEAKER 2
+And I'm just gonna comment this out because I'll come back to that what I've done there in a second.
+
+SPEAKER 0
+I'm gonna comment that out.
+
+SPEAKER 2
+Kind of that out.
+
+SPEAKER 0
+Okay So I've Got one for loop now.
+
+SPEAKER 1
+Um but I need to go I can't I'm not looking at going across the width of the image anymore.
+
+SPEAKER 2
+I want to go over the length of the pixels are right okay.
+
+SPEAKER 1
+It's an array so it has a Length It's one
+
+SPEAKER 2
+dimensional.
+
+SPEAKER 0
+So I want to hit all of those pixel locations.
+
+SPEAKER 1
+Um And I can do what I'm gonna do in
+
+SPEAKER 2
+the dark and I'm gonna darken the whole lot. Now let's darken the red channel and World Zero.
+
+SPEAKER 0
+Let's make it purple just red and and blue.
+
+SPEAKER 2
+Well purple eyes. It. Okay now I gotta make sure I'm calling the right version of this.
+
+SPEAKER 0
+Which one do I edit?
+
+SPEAKER 2
+This is what I did in the last lecture. I was editing one and calling the other. Okay This is the this um one and 2 or the version with two is the version that operates directly on pixel arrays so you can see how how they differ. Okay let's run that.
+
+SPEAKER 0
+Okay.
+
+SPEAKER 2
+So now I have purple eyes that I didn't need
+
+SPEAKER 1
+to know where I and J was I just went
+
+SPEAKER 2
+through every single pixel a new index for each and you think of it as was the one dimensional array.
+
+SPEAKER 0
+Now you can use I n J. To do the same thing on the one dimensional array, but you have to figure out well how far in
+
+SPEAKER 1
+that one dimensional array is it when I jumped so many rows down into the image, like as I moved down in J?
+
+SPEAKER 0
+Where am I If I was to reshape This thing
+
+SPEAKER 2
+as a one dimensional array?
+
+SPEAKER 0
+Um We have Alright, so to do that um let's
+
+SPEAKER 2
+go back, right, so we're going to iterate over the
+
+SPEAKER 1
+size of the image in the X and Y direction. But we've gotta we've gotta adjust this index right to figure out where, so the way this works right?
+
+SPEAKER 0
+I've got my image here, I've got my wish, I've got my height. Okay, let's just think about. Okay, so the question is when I jumped down, when I go across the first row, i is the value
+
+SPEAKER 1
+for J.
+
+SPEAKER 2
+zero, so J is not going to do anything.
+
+SPEAKER 0
+So the question is, what is the index of that? If I'm working on a, you know, that's gonna go forever. That way, a one dimensional array, where this is the first road, This is now the second word right? Each one of these is what it is about W
+
+SPEAKER 2
+And with so basically the top row, so it did
+
+SPEAKER 0
+the bottom road and so on and so on. So if I want to get this piece over here, which is this big tool, I need to know how
+
+SPEAKER 1
+to offset the index Every time I jump down one
+
+SPEAKER 0
+in J. So that's that's pretty straightforward because if we just multiply
+
+SPEAKER 1
+J by the width, right, it'll be zero in this
+
+SPEAKER 0
+road. It'll be with plus.
+
+SPEAKER 1
+And as J goes up, sorry, as I goes up,
+
+SPEAKER 0
+it'll be the width plus whatever the value of I
+
+SPEAKER 2
+is and so on and so on.
+
+SPEAKER 0
+Okay. So if you want to work with one dimensional arrays,
+
+SPEAKER 1
+um and you still want to understand the positioning because sometimes you want your operating on a pixel and you want to compare this pixel two, uh one of the
+
+SPEAKER 0
+ones around it, right? Or one of the ones next to it and you
+
+SPEAKER 1
+do that actually in the Last Question of Lab six.
+
+SPEAKER 0
+But when you're doing that, you need to understand, you
+
+SPEAKER 1
+need to have an understanding of where you're looking.
+
+SPEAKER 0
+Okay, so, um so we can we can basically convert
+
+SPEAKER 1
+our two dimensional indexes into a one dimensional location on
+
+SPEAKER 2
+this one dimensional array and then access them with that.
+
+SPEAKER 0
+Oops, what did I do?
+
+SPEAKER 2
+I've got some some spurious character.
+
+SPEAKER 0
+I've got an incomplete statement somewhere who's had this error. I don't know what I did.
+
+SPEAKER 2
+I didn't I don't think I I don't think I un commented that. Right. So I had an unbalanced bracket.
+
+SPEAKER 0
+So this is the most common error I think any
+
+SPEAKER 1
+of you have probably ever gotten. And the difficulty with this area is that you're always looking somewhere where the error is not because it is trying to understand where the area is based on complete statements and complete methods and complete blocks and so whenever you're missing like a semi colon or a curly brace
+
+SPEAKER 2
+or something, it doesn't know like if I'm if I'm
+
+SPEAKER 1
+not I don't have the closing curly brace, it thinks
+
+SPEAKER 0
+that block goes on on to the next method and
+
+SPEAKER 1
+so it says that the error is somewhere there.
+
+SPEAKER 2
+Um So if you get that kind of error actually, I should make sure. Right, so the same result, Same result. Exactly. Okay. Um Actually what if we wanted to purple eyes just well I'm not going to type it out because I'm gonna burn too much time there.
+
+SPEAKER 1
+But you get the idea now, once you've finished manipulating that pixel array to you need to call the method update pixels because it's it's basically extracted this attribute but it needs to put that attribute back into the image
+
+SPEAKER 2
+object properly.
+
+SPEAKER 0
+Okay.
+
+SPEAKER 2
+Um and so you call this update pixels method when you're done.
+
+SPEAKER 1
+If you're working on an image, you invoke it on
+
+SPEAKER 2
+the the image reference if this these same techniques work for the application window.
+
+SPEAKER 0
+Right?
+
+SPEAKER 2
+Except they're not invoked on anything, they're just called um directly.
+
+SPEAKER 0
+Alright. Um Right, so so most of the time we will
+
+SPEAKER 1
+work on an image, right? We're dealing with image objects but sometimes it's convenient um
+
+SPEAKER 0
+to actually combine image objects with other things that we
+
+SPEAKER 1
+can draw onto the application window.
+
+SPEAKER 0
+Right? So we know that when we draw lines, when we
+
+SPEAKER 1
+draw shapes, uh text and all this sort of stuff, it paints the pixels in the window.
+
+SPEAKER 0
+Right?
+
+SPEAKER 1
+And when we paint in the order that we paint
+
+SPEAKER 0
+the order that we draw lines, the order that we
+
+SPEAKER 1
+draw filled objects and so on, they will be overlaid on the window, they're basically painted over.
+
+SPEAKER 2
+Right? We're changing the pixels of that window um to whatever
+
+SPEAKER 1
+the last thing is that you've drawn um or the last thing it is is that you've painted as a
+
+SPEAKER 2
+as an image to that window.
+
+SPEAKER 1
+So you can actually use the window as a compositing canvas where you can composite layers of things and they'll modify the underlying pixels. But that pixel, that sort of pixel is just an
+
+SPEAKER 0
+image.
+
+SPEAKER 1
+And then we can extract things from the application window
+
+SPEAKER 0
+and load them back into an image object.
+
+SPEAKER 1
+Do something with the image object or we can actually
+
+SPEAKER 2
+save as as an image file and so on. So you can you can have this mixture of an
+
+SPEAKER 1
+image that you're loading in with graphics that you're generating
+
+SPEAKER 0
+right?
+
+SPEAKER 1
+And you can save at any snapshot in time, whatever
+
+SPEAKER 2
+is on the application window. Now, if you save that over time, you start to
+
+SPEAKER 1
+create frames that you can play back as a video,
+
+SPEAKER 0
+right? We're not there yet.
+
+SPEAKER 2
+But here we're just looking at saving some composite of different images to save an image directly to a file.
+
+SPEAKER 1
+We just call this safe method.
+
+SPEAKER 2
+Um Right.
+
+SPEAKER 0
+So typically if I wanted to um I think I've
+
+SPEAKER 2
+got a couple of different options here. Right? So if if I'm working with these images, they're all
+
+SPEAKER 1
+p image objects.
+
+SPEAKER 0
+Um but I've overlaid them onto the canvas onto the
+
+SPEAKER 2
+application window.
+
+SPEAKER 1
+So now the image on the window is not any one of these.
+
+SPEAKER 2
+It's a it's a composite of all of them.
+
+SPEAKER 0
+Right?
+
+SPEAKER 1
+And you can also see background as well.
+
+SPEAKER 2
+So it's also a composite of whatever you painted as the background. Um This is just the default background but if I had painted it white or black, I wouldn't see the gray.
+
+SPEAKER 0
+Right?
+
+SPEAKER 1
+Um if I had loaded an image and painted that to the background first I'd have the background of an
+
+SPEAKER 2
+image with these things, objects overlaid on top.
+
+SPEAKER 0
+Now these are objects that these are generated from image,
+
+SPEAKER 1
+images and pixels directly and then painted. But it's the same thing for objects, whatever we draw
+
+SPEAKER 2
+to that window.
+
+SPEAKER 0
+So if I want to save everything that's in that
+
+SPEAKER 1
+window as an image file, I can just run safe
+
+SPEAKER 2
+directly. So basically it's the same thing going on here with
+
+SPEAKER 0
+get set save load pixels whenever you're not using an
+
+SPEAKER 1
+object to invoke that method.
+
+SPEAKER 0
+The assumption is that that method is being run on
+
+SPEAKER 2
+the application window.
+
+SPEAKER 0
+Okay. So it's treating that as the image object that you're
+
+SPEAKER 2
+running these things on.
+
+SPEAKER 0
+So I'll save the application window here using this this
+
+SPEAKER 2
+command. Okay. I never I never have a clock in front of me. Um They all disappear.
+
+SPEAKER 0
+Got a clock somewhere.
+
+SPEAKER 2
+Okay, plenty of time.
+
+SPEAKER 0
+Alright. Um so in the other case, if I say so
+
+SPEAKER 1
+this this image that I save here is going to be quite large, it's gonna be the size of my
+
+SPEAKER 2
+application window in resolution, whereas this one here when I
+
+SPEAKER 1
+save image to which is just this this image here.
+
+SPEAKER 2
+Okay.
+
+SPEAKER 1
+That's going to be the size of that particular image.
+
+SPEAKER 2
+So this file and I can say there's different file
+
+SPEAKER 1
+formats that are supported.
+
+SPEAKER 2
+So you can say there's any one of the supported file formats, jpeg or portable network graphics. PNG. There's a few other tips, I think, gifts that are
+
+SPEAKER 0
+supported. Is it just for gift?
+
+SPEAKER 2
+Um anyway, so I can save those um as separate files as well.
+
+SPEAKER 1
+And the other thing I can do is um so if we're using the get method and I wanted to get all of these pixels and put them into an
+
+SPEAKER 2
+image to continue working with them or save them or
+
+SPEAKER 1
+just keep it aside as an image object because I wanted to use the canvas to recreate something new before
+
+SPEAKER 2
+I combine it with a previous version of the canvas
+
+SPEAKER 1
+then um I can create an image object created the
+
+SPEAKER 2
+right height and width.
+
+SPEAKER 0
+Um and I can get from the image from the
+
+SPEAKER 1
+application window and save that directly into an image object.
+
+SPEAKER 2
+So it can always extract whatever I'm compositing on the
+
+SPEAKER 1
+canvas at any time.
+
+SPEAKER 2
+And save it in an image object.
+
+SPEAKER 0
+Right?
+
+SPEAKER 2
+And then I can save that image later. Um using the save command as well.
+
+SPEAKER 0
+Makes sense.
+
+SPEAKER 1
+Okay, what else can we do with images?
+
+SPEAKER 0
+Um and and from here on we're just going to
+
+SPEAKER 1
+look at a bunch of different examples of um color manipulation, spatial manipulations. Now, the reason I start with all of the low level stuff is because ultimately right if you're using processing um and you don't know how to get under the
+
+SPEAKER 0
+hood and manipulate pixels yourself. Um There's a limit to what you can do right?
+
+SPEAKER 2
+You can basically do whatever methods um that are available
+
+SPEAKER 1
+in the library. You can basically you're restricted to be able to do
+
+SPEAKER 0
+whatever has been coded for you um in those methods.
+
+SPEAKER 2
+So one of those methods is filter and filters.
+
+SPEAKER 1
+If you go into the help for filters is um it's just a bunch of standard operations that you might do on on an image but the global that generally done to the whole of the image. one thing you can do to restrict is that that
+
+SPEAKER 0
+get method by the way allows you to specify sub
+
+SPEAKER 1
+ranges sub sub regions within the image to get the
+
+SPEAKER 2
+pixels out as an image as well. So you can also do that and then apply these filters locally but these filters so there's a threshold filter,
+
+SPEAKER 1
+there's great, there's a filter that will convert everything to
+
+SPEAKER 2
+gray. Right?
+
+SPEAKER 1
+So if you're thinking oh no we're gonna go back
+
+SPEAKER 2
+to lab one and get the formula out and figure out how to combine red, green and blue to get our gray level for the lab, you don't need to
+
+SPEAKER 1
+actually can just make a copy of the image, filter it to convert it to gray and then have two images where you're referencing one to get the gray level and you're referencing the other to get the RGB values
+
+SPEAKER 0
+right? So you don't have to explicitly sit there and um
+
+SPEAKER 2
+compute the gray levels um Right and then there's there's
+
+SPEAKER 1
+other effects. So um you can have a look through those but just to give you an idea. So a threshold, basically what it's doing is creating a
+
+SPEAKER 2
+black and white image and it's looking at the gray
+
+SPEAKER 1
+scale values, the equivalent grayscale values.
+
+SPEAKER 0
+So the um if you were to convert this to
+
+SPEAKER 2
+gray scale of bright and dark value and it's saying
+
+SPEAKER 1
+well over a specific percentage of the range, I'm gonna switch to white if it's over that and I'm gonna switch to black if it's under it.
+
+SPEAKER 0
+So it's a hard decision that it's making on pixel
+
+SPEAKER 1
+values. Any pixel values above will set them to white.
+
+SPEAKER 2
+Any pixels values below will set it to black. And you can control that parameter. There's a parameter there where you can control that and
+
+SPEAKER 1
+you get something that looks sort of um uh like
+
+SPEAKER 2
+this so if you if you modify this parameter you're depending on the image of course um You know you can make masks and things this way and in lab six I sort of talk about this is an option, there's a creative option for question two where um instead of just doing the vineyard and you create some kind of fancy mask and and use that instead um to mask your image.
+
+SPEAKER 1
+Right? So um but we've also got things like blur so blur. Will depending on the you have like a size parameter
+
+SPEAKER 2
+of how big of an area do you look at when you're blurring way blurring works Is that as you
+
+SPEAKER 1
+move around the pixel you look at the pixels around that pixel and you take some kind of you blend them together.
+
+SPEAKER 2
+So you might take an average for instance of the pixels in an area. Um You might as you might imagine that's not something straightforward to program right? Because you have to know your I.
+
+SPEAKER 1
+N. J. Position. Then you have to get all of the pixels relative to that. I M J extract them all do some kind of
+
+SPEAKER 2
+average right?
+
+SPEAKER 1
+There's a filter that does that for you. It's essentially what it's doing the bigger this parameter here, the more blurry it's going to be because it's going
+
+SPEAKER 2
+to average over a wider area, but you can play
+
+SPEAKER 1
+around with it, right?
+
+SPEAKER 0
+But if you wanted to do a blow in a
+
+SPEAKER 1
+very specific way, you can't right, if you wanted to do some other operation, like I want to, I want to not look at all of the pixels in the vicinity, but I want to look at specific pixels that are a certain distance away and compute an average something custom like that.
+
+SPEAKER 0
+You can't do it with these um with these methods
+
+SPEAKER 1
+you have to do that yourself by manually going through and manipulating the pixels posterized is a really good one. Posterized basically tries to condense the color range or that it tries to pick.
+
+SPEAKER 0
+So if I've got, you know, a million colors or
+
+SPEAKER 1
+whatever in My normal 24 bit image, um It tries to condense that down to four colors, so it picks four common colors that are occurring in the image.
+
+SPEAKER 2
+And and it'll and for every pixel will find the
+
+SPEAKER 1
+closest color and it will paint it that color.
+
+SPEAKER 0
+Right? So this is sort of gives you your kind of
+
+SPEAKER 1
+cartoon look, of course you can give more levels as
+
+SPEAKER 0
+well, but these sorts of effects, they're built built in,
+
+SPEAKER 1
+you can use methods to do this.
+
+SPEAKER 0
+Um So if you wanted to threshold, for example, if
+
+SPEAKER 1
+you do a posterized first and then a threshold.
+
+SPEAKER 2
+Um you can get very clear kind of lines. Um that sort of trace the edges of these transitions in color. Um So combining these filters together as useful as well. So how do we actually run the filter?
+
+SPEAKER 1
+We just we call this method on the image if
+
+SPEAKER 0
+we want to filter the we can apply it to
+
+SPEAKER 1
+the application window as well, but we we call filter
+
+SPEAKER 2
+without a reference to an object. Right? And it'll filter whatever images in the application window.
+
+SPEAKER 0
+All right. Um So mask there's a method called mask which will
+
+SPEAKER 1
+allow us to do so in the lab we're not necessary. You can use this right for the lab but you can do the masking effect by actually going through the image pixels and making decisions with this statements.
+
+SPEAKER 0
+Right. Do I do I so say I'm and we'll look
+
+SPEAKER 1
+at example of this towards the end of this lecture. Not today.
+
+SPEAKER 0
+This this set of slides where we'll do something you've
+
+SPEAKER 1
+heard of Cromer King green screen. Right? So in a green screen you've got two images you've got some objects in front of a green screen and then you've got some other image that's supposed to represent
+
+SPEAKER 2
+the background. And when you combine these two together, you're making a
+
+SPEAKER 1
+decision for every pixel, is it green? If it's green, I'm gonna grab the background.
+
+SPEAKER 0
+If it's not green, I'm gonna grab the foreground.
+
+SPEAKER 2
+So then you overlay those two things together. Um Well look an example of how to do that,
+
+SPEAKER 1
+but that's what masking is really doing is it's taking an image and it's looking at the Alpha channel and It's using the alpha channel of one image. Um Two, basically it's the same as overlaying that image on top of the other when there's an alpha channel and you'll see through to see that second layer. But it does that operation on this single image.
+
+SPEAKER 0
+So it's sort of blending these two things together, right?
+
+SPEAKER 1
+Yeah, you'll have more practice With that one in Lab
+
+SPEAKER 2
+six.
+
+SPEAKER 0
+Alright, so um how we how we doing for time? So, I've got five minutes famous last words like why
+
+SPEAKER 2
+does this guy always go right down to two minutes over because These one hour lectures of 15 minute lectures, it's just it's not enough time. Anyway. Um I would hope if I didn't go off on tangents, so All right, so um spatial manipulations, things like
+
+SPEAKER 0
+flip, right? Um we'll come back to some examples of this, but
+
+SPEAKER 1
+I'll just talk about it. You might want to think about how you might do
+
+SPEAKER 2
+this. Okay, um So if I wanted to do a flip
+
+SPEAKER 1
+operation in the horizontal, so about the center axis, I
+
+SPEAKER 2
+want to flip the image this way.
+
+SPEAKER 1
+Sometimes you take an image, you need to process it because it's it's not the right way around.
+
+SPEAKER 2
+Okay, I wanna flip this way or flip, it's a bit more difficult to flip on the diagonal but for
+
+SPEAKER 1
+flipping horizontally and vertically. Okay. It's just a matter of this is sort of like reverse.
+
+SPEAKER 0
+Okay. The reverse example that we went through for one dimensional
+
+SPEAKER 1
+array where I wanted to reverse the array around and did that on the board in the lecture.
+
+SPEAKER 0
+Um Same idea here. Okay. But if we're flipping on a horizontal we're doing a
+
+SPEAKER 1
+switch on our um I coordinate right?
+
+SPEAKER 0
+So when I zero I want to make that I
+
+SPEAKER 1
+want to switch that with Um with -1.
+
+SPEAKER 0
+Right?
+
+SPEAKER 2
+Um and so on. When I was two, sorry When I was one with minus one Sorry with -1 is the last one then with -2 and so on and so on so forth.
+
+SPEAKER 0
+So whenever you do operations like that, think about how
+
+SPEAKER 1
+the indexes are changing, you'll see a pattern and then
+
+SPEAKER 2
+um yeah this seems like a straightforward okay um it
+
+SPEAKER 0
+can be tricky. Alright vertically.
+
+SPEAKER 1
+Again we're doing it on the height, like we're switching
+
+SPEAKER 0
+and when we do these switches right? If we're operating on the same image right?
+
+SPEAKER 1
+It's like a swap. So that shuffle example you did in the last lab.
+
+SPEAKER 0
+Okay you have to do a swap.
+
+SPEAKER 1
+If you're working on the one image.
+
+SPEAKER 0
+Now we're not using random for some operation like this.
+
+SPEAKER 1
+So we could make a copy and then just be transferring a pixel to where it should be in the
+
+SPEAKER 2
+second image. That's fine when we do that.
+
+SPEAKER 1
+By the way it's called double buffering.
+
+SPEAKER 0
+Okay we're using the to to um sam two buffers
+
+SPEAKER 2
+of the image to work our result.
+
+SPEAKER 0
+Um So we don't Impact the other one. Now if I'm randomly picking locations and I want to
+
+SPEAKER 1
+switch the pixels around okay or you know groups of pixels around then I can't do this.
+
+SPEAKER 0
+Right Because what's the problem that we found with random
+
+SPEAKER 1
+that the question that I answered about 100 times on
+
+SPEAKER 0
+the discord for everyone to read 100 times. What's what's the deal with random? What's what's the problem when you're swapping elements with random or if you're just finding an element with random and
+
+SPEAKER 2
+then you want to put it somewhere right.
+
+SPEAKER 0
+What was the issue that kept coming out?
+
+SPEAKER 2
+Yeah Yeah like random doesn't guarantee you're going to get a different random value every time and that you're gonna get all of the values. One time over the range of values that you're looking
+
+SPEAKER 0
+at.
+
+SPEAKER 2
+So you know if you're sampling from somewhere a random
+
+SPEAKER 1
+pixel and then you put it into the second buffer
+
+SPEAKER 0
+that second buffer may not have all of the pixels
+
+SPEAKER 1
+from the first one.
+
+SPEAKER 0
+Right So that's a problem.
+
+SPEAKER 2
+So in those sorts of when you're shuffling things around.
+
+SPEAKER 1
+Always.
+
+SPEAKER 0
+So think about that game what's that game where you
+
+SPEAKER 1
+got the tiles and you move the tiles around there's one missing.
+
+SPEAKER 0
+It's like a puzzle and you move the tiles around. What do they call that? What is that slide puzzle.
+
+SPEAKER 1
+Yeah a slide puzzle. So I've got an example of how to tile the image and make a swap of a group of pixels. Well we've run out of time today but we'll go
+
+SPEAKER 2
+through this.
+
+SPEAKER 0
+Um But like if you want to build a simple
+
+SPEAKER 1
+interactive thing where you load up an image and you divide it up into tiles and then you get rid of one and you want to be able to move things around.
+
+SPEAKER 0
+You're swapping right?
+
+SPEAKER 1
+So you know you've you've got to go through that fundamental process of saving something moving the one bit that you want to swap taking the safe thing and moving it back to where what it's replacing in this case
+
+SPEAKER 2
+the space the empty square would be replacing with the tile every time you move.
+
+SPEAKER 0
+Um And so on anyway. Um So there's a couple of other examples that I've
+
+SPEAKER 2
+just you know cropping cropping is something that's really easy
+
+SPEAKER 1
+to do in processing because get actually does a crop
+
+SPEAKER 2
+for you.
+
+SPEAKER 0
+So I'll look at um some examples of the tiling
+
+SPEAKER 2
+and crop and swap. Um You know where we're switching things around in the next lecture.
+
+SPEAKER 0
+Um I am this close to posting the sample practice tests by the way for next week. Lab Test two is coming up. The marks still aren't back for lab test one yet but we're trying to get them to you before lab
+
+SPEAKER 1
+test too. Um And um I said that I'd do a walkthrough
+
+SPEAKER 0
+of the lab test too on friday. So this this lecture may extend over until next week. Right? We're talking about moving images which are just an extension
+
+SPEAKER 2
+of these anyway video.
+
+SPEAKER 0
+So some of this stuff I might not get to
+
+SPEAKER 2
+so that we can just have some prep for the
+
+SPEAKER 0
+lab test. Um Any other questions?
+
+SPEAKER 1
+Any questions yep this afternoon Actually during my office hours I'll be posting it up. Yeah so um who prefers an online lecture on friday
+
+SPEAKER 0
+friday friday might be better to do here because it's
+
+SPEAKER 1
+prepped for the for the exam we'll go through some
+
+SPEAKER 0
+yeah. Picture.

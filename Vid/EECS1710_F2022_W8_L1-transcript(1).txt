@@ -1,0 +1,965 @@
+SPEAKER 0
+Okay, alright, I'm recording guys. So we're gonna try this out. Um If you have trouble seeing on there, you can try and look on you know, just uh just mute yourself and mute your video. So there's not that much data, you know, clogging up
+
+SPEAKER 1
+the wifi in the room. All right, so um at the end of the last
+
+SPEAKER 0
+lecture, I had the question um about how do you actually calculate the frequencies of the notes on the keyboard?
+
+SPEAKER 1
+And I had had a couple of slides there? Um But I hadn't got to it and then I
+
+SPEAKER 0
+ended up just answering the question and that's on the
+
+SPEAKER 1
+video actually.
+
+SPEAKER 0
+So do you want me to go back over that? The idea behind that? Okay, I take that as a Yes.
+
+SPEAKER 1
+Right.
+
+SPEAKER 0
+This is important for the last part of your um for question four And Lab five.
+
+SPEAKER 1
+Right.
+
+SPEAKER 0
+So so the idea here is that when you've got the keyboard, if you know the frequency of any one of the notes on the keyboard, right?
+
+SPEAKER 1
+All the other keys, there's a relationship between them.
+
+SPEAKER 0
+So we know who plays piano, who plays the guitar? Who plays well. Um So if you're starting with the notes on the keyboard, um you've got 12 keys, including the black keys at the black and the white keys, you go up
+
+SPEAKER 1
+what's called a semi tone or? Yeah, it's called a semi tone. Right?
+
+SPEAKER 0
+And Basically you have to go up 12 steps Um to get to the same note in the next octave. So you've got 12 steps to go from one octave to the next octave, right, that's the same note. So I can go from a to a but I've gone up in pitch to the next octave, what does that next octave mean? It means that the frequency has doubled. Okay, so it takes 12 steps to get. So if I start at A four here, I don't know if you can see that. A four, That's the concept a it's reference, it's a reference frequency. Standard tuning, it would be 440 hertz for that note. So it would be a sign your side with frequency of 400 and 40. Right? So if I wanted to generate the notes of the rest of the keys, um there's a standard progression to them and it's described by this formula, I've got this formula rewritten on the next page, but basically the idea of this formula here, maybe I can blow it up. Is that any better?
+
+SPEAKER 1
+So this formula here basically says, if I go up
+
+SPEAKER 0
+one step, right, this is how much I'm gonna increase the frequency from that reference to get the frequency of the next key, which is going to be the Black
+
+SPEAKER 1
+one Next to it.
+
+SPEAKER 0
+Right? So that would be one step. And then if I went up two steps um instead of a one here, I'd have a two, right. If I go up 12 steps, I'm gonna have 12 instead of a one and which is going to make two to the power of one, which is just too. So I'm doubling the frequency, see how that works.
+
+SPEAKER 1
+Right? So Once I've gone up 12 keys, I should have
+
+SPEAKER 0
+effectively doubled the frequency. Um And every note in between is sort of it's given this is a better version of the formula. The frequency that we want to figure out the desired frequency is the frequency of the reference note multiplied by two to the power of the number of steps, the number of keys we have to go.
+
+SPEAKER 1
+Um The positive direction is going up in keys.
+
+SPEAKER 0
+Right? If I want to go down in keys, it's a negative step.
+
+SPEAKER 1
+Alright. So if I go down negative 12 steps, I'm going
+
+SPEAKER 0
+to be two to the power of -1, which is the same as a half.
+
+SPEAKER 1
+So it's gonna have the frequency, right? If I Go down 24 steps, I'm gonna have twice.
+
+SPEAKER 0
+Right? So as long as I've got the frequency of any one reference note and we were gonna use 440 hertz
+
+SPEAKER 1
+as the reference note.
+
+SPEAKER 0
+Um I can actually figure out what the frequencies of
+
+SPEAKER 1
+the other notes are.
+
+SPEAKER 0
+And in fact in in the lab In question four, we're gonna read in from a text file Just a series of 12 notes. Right? Just a very simple version of this. So one octave. But in the text file we're going to represent the notes as an index, like 0 to 11. Right? And we're going to based on that index, we'll know how many steps we needed to go to get to
+
+SPEAKER 1
+that particular key.
+
+SPEAKER 0
+And we're gonna use this formula to generate the frequency for that note. And in the text file actually, we're also going to store the duration of the note, Right? So you can hold notes For, you know, um one beat per four beats or whatever, like a quarter of
+
+SPEAKER 1
+a bar. I'm not a piano player. So maybe I'm using the wrong terminology. Someone correct me. Right? But if you want to hold it for four beats,
+
+SPEAKER 0
+you'd hold it for a longer, generate a longer duration.
+
+SPEAKER 1
+Right now, who started on Lab five in the in in today's session. So I got a lot of questions about duration. How do you use duration? So if the samples. So We in the previous lecture we calculated one cycle on the sample rate, number of samples. Right? So We just built an array for one cycle, right? Or or one second's worth of samples. But at the sample rate.
+
+SPEAKER 0
+So the sample rate is defined as the number of
+
+SPEAKER 1
+samples per second. Right? So 1 2nd as a duration would be one times
+
+SPEAKER 0
+the sample rate.
+
+SPEAKER 1
+So two seconds or 2.5 seconds or three seconds of duration. If I wanted to make that longer? I and I wanted to figure out how many samples
+
+SPEAKER 0
+I need in my, my array to store a longer sine wave. Then I just multiply the sample rate by the duration
+
+SPEAKER 1
+and I'll get the number of samples. So what does that mean?
+
+SPEAKER 0
+It means that if I want to iterate now I have to iterate over the number of samples.
+
+SPEAKER 1
+I have to create an array that's that big. And I have to iterate over it over all of
+
+SPEAKER 0
+those samples.
+
+SPEAKER 1
+So now the issue comes when you want the sine
+
+SPEAKER 0
+wave to repeat, how do you make it continue and repeat?
+
+SPEAKER 1
+Well, this is where you can think about using the modular, right?
+
+SPEAKER 0
+I is gonna vary but once we get to the end of the sample, right?
+
+SPEAKER 1
+We wanted to start again. Right? So if I get because now it's going to a
+
+SPEAKER 0
+larger number of samples and sample rate.
+
+SPEAKER 1
+If I keeps on growing, how do we keep it
+
+SPEAKER 0
+constrained in the range Of 0 to the sample rate?
+
+SPEAKER 1
+Well, we just use the modelers, we take that eye which is going to go big and once it goes
+
+SPEAKER 0
+beyond the sample rate, if we take the modular with respect to the sample rates, the same as dividing and
+
+SPEAKER 1
+finding the remainder. So once we go over the sample rate, we're just
+
+SPEAKER 0
+gonna have to remained out past the sample rate, it's gonna start again.
+
+SPEAKER 1
+I was gonna start again. Right or not. I I is going to get get big but I modular sample rate is gonna start again. Right. Um When you get to that part of the lab,
+
+SPEAKER 0
+remember modular.
+
+SPEAKER 1
+Okay. And and think about how you can use modular. Alright, get back let's get back to this. Right?
+
+SPEAKER 0
+So, so the example here is if I wanted to calculate um the A note that's one octave, the Next octave up the 5th octave.
+
+SPEAKER 1
+The Concert is at the 4th octave on a keyboard. Full size keyboard. This is the sort of in the middle of the year. I don't show a full size keyboard here though.
+
+SPEAKER 0
+Right? So I want to calculate that one. So this is my reference frequency And this is the one I want to calculate.
+
+SPEAKER 1
+We're Going up 12 steps. Right? So the Desired one is the frequency at a five, it's The frequency at a four times two to the
+
+SPEAKER 0
+power of 12 Steps on 12, which is going to
+
+SPEAKER 1
+double the frequency. So I get 880, write all the notes in between
+
+SPEAKER 0
+would just be a fraction of two to the power
+
+SPEAKER 1
+Of a fraction of 12. Right?
+
+SPEAKER 0
+So if I went up, so the first one 123456. So the second black note Here above the a would be six steps.
+
+SPEAKER 1
+So It would be two to the power of six on 12. Right? Which would give me some frequency in between these two. Alright. Um So I think I think I did um let me just check that I've got one. Alright, I got a lot of things set up here. Let's just make away from takeaway from Form one. I don't know if you can hear that. The plant near that. Okay, so If that's the tone for concert eight doesn't sound like a piano, right? It's a little bit electronic. Um All right, so then if I if I modify this, let's make this frequency 4 40, right? Um times two to the power of Some number of steps. So let's go up one step on 12. Okay. Did that sound different? Oh, what's the problem? I'm not using that frequency. I'm using a fixed line. It sounded the same to me. Was it just me? Okay, So that's that one black note above. Right. Amazing. Amazing. Um Alright, so when you're displaying your way form, Another
+
+SPEAKER 0
+question that came up for those Who are already on
+
+SPEAKER 1
+Lab five, there is a variable for the display. This is not the same method by the way. But there is a variable for the display that has
+
+SPEAKER 0
+has not the number of samples in your way form, but the number of samples you want to display.
+
+SPEAKER 1
+So the assumption in that Lab five is that you know when I've got A long 5 2nd wave form of what is that? five times 4 four 44,100 that many samples. And I try to draw that in a window. That's this big on my screen. I Probably won't see a lot because the sine wave
+
+SPEAKER 0
+is changing so quickly, so I might want to just see the 100 samples.
+
+SPEAKER 1
+So that num variable in the question is just saying
+
+SPEAKER 0
+let's just display part of it.
+
+SPEAKER 1
+You could change your display method just to show a section of the sine wave because the sine wave doesn't
+
+SPEAKER 0
+change anywhere in the sine waves the same all the way through.
+
+SPEAKER 1
+It doesn't really matter where we look at it, but
+
+SPEAKER 0
+when we start to muck around with the sine wave
+
+SPEAKER 1
+and and make it grow and shrink and do other kinds of weird things, um You may want to make a display method that can just grab a piece of your sine wave and have a look at it to see what's going on. Okay, so that's um that's just seeing 100 samples. Right? If I wanted to look over the, what was it? 40 over the sample rate. That's already hard to look at, right. 44,000. So let's just look at 4000, sort of see it Probably have to zoom in more than that. 2000. Right? So the waveform itself is much longer than what we're looking at.
+
+SPEAKER 0
+Um But that's sort of a convenient way of of
+
+SPEAKER 1
+seeing whether or not what we're generating is sort of appropriate. Alright, does that make sense?
+
+SPEAKER 0
+Let's look at another example. That's 12 semi tones up.
+
+SPEAKER 1
+So now let's start at the same reference And go um nine steps down. Okay, so one 23 45678 nine steps down. So that would be we're starting at the same reference. We go nine steps down um we go down to 260 Hz. Okay so we could do the same thing here And go in the other direction, -1. Now if you're simulating an instrument, like an asian instrument
+
+SPEAKER 0
+that goes between notes then you'd have finer, finer grains
+
+SPEAKER 1
+to get those notes in between right? Or a slider. Maybe use the mouse to actually like gradually go between. You could you could build a simple music simulated this way. Now of course this doesn't have the there's a lot
+
+SPEAKER 0
+of other sound features that are built into these signals when you use instruments that color the sound.
+
+SPEAKER 1
+Right?
+
+SPEAKER 0
+These are very pure sine waves, that's what they sound like.
+
+SPEAKER 1
+Um All right so so there's a lot of other
+
+SPEAKER 0
+stuff that we can do um to make the sound
+
+SPEAKER 1
+a bit more interesting. Um Okay so I just showed you this example. I'm not gonna walk you through the code here. Right?
+
+SPEAKER 0
+But there are a lot of other waveform patterns that we can use and we can combine them in different ways to get different sorts of sounds as well.
+
+SPEAKER 1
+In fact has anyone heard of a voice code.
+
+SPEAKER 0
+A vocoder?
+
+SPEAKER 1
+Yeah so voice coding. Um So if you think about the vows that we
+
+SPEAKER 0
+make with speech, write the vows vibrate.
+
+SPEAKER 1
+The different vows vibrate at a different frequency right?
+
+SPEAKER 0
+We're not all exactly the same right?
+
+SPEAKER 1
+But you can feel it the vibration actually in your throat. So if you just put your finger on your throat and you just say ah or E. A. Or R. Right?
+
+SPEAKER 0
+You feel a vibration there. That's a sine wave effectively.
+
+SPEAKER 1
+Now we also articulate, we also articulate that sound. So it's not a pure sine wave forever. There's an envelope to it. It sort of grows in amplitude as we push air over the the voice box and then it shrinks in amplitude. So we we articulate the sound by manipulating that tone.
+
+SPEAKER 0
+But then we have sounds like um if you if you make a, so we have voiced sounds they're the ones that make your throat vibrate, right? And then you have um um voiced sounds.
+
+SPEAKER 1
+So if you if you make feel it right, there's
+
+SPEAKER 0
+no vibration right?
+
+SPEAKER 1
+There's no vibration at all. So this would be some other kind of wave form. So other kinds of wave forms that don't have this
+
+SPEAKER 0
+oscillation to them. Don't have this vibration.
+
+SPEAKER 1
+Um Things like noise like white noise. So white noise is just uh you know we build
+
+SPEAKER 0
+an array.
+
+SPEAKER 1
+We pick random values and it's just like the static
+
+SPEAKER 0
+that you hear.
+
+SPEAKER 1
+Um when you I'm just trying to think of a situation now when you when you're trying to pick up
+
+SPEAKER 0
+radio you don't do that anymore, do you?
+
+SPEAKER 1
+The kind of noise you guys hear now is sort of like this um this high pitched kind of squeaking when when there's something wrong with the signal or the audio is getting messed up when you're listening to it through youtube or something like that. It's digital noise. It's it's different from this stuff. But anyway, we can we can use these things to simulate different sorts of sounds. We can build square waves, we can build triangular types
+
+SPEAKER 0
+of waves as well.
+
+SPEAKER 1
+Um But sorry, sine wave, we know how to do that from the last lecture.
+
+SPEAKER 0
+Um I just wanted to point out that if you if you end up creating a number of samples that goes for a longer duration than the sample. Right.
+
+SPEAKER 1
+Right.
+
+SPEAKER 0
+You've got to figure out what that number of samples
+
+SPEAKER 1
+Is going to be, it's going to be the duration times two separate durations in seconds, separators in seconds per cycle or samples per second. Right, Multiply The two Together. You get samples. Okay, So then you need to build a bigger bigger
+
+SPEAKER 0
+array to store that in and you need to iterate
+
+SPEAKER 1
+over all of those values.
+
+SPEAKER 0
+And those values are going to go beyond what we
+
+SPEAKER 1
+were doing before, which was just ion S. R.
+
+SPEAKER 0
+So to get I to effectively, or the numerator of
+
+SPEAKER 1
+that uh that i on S. R. To repeat. You can use a modular, right, modulates with respect to the sample rate in this case we're passing the sample rate. All right, Okay.
+
+SPEAKER 0
+Um How do we generate white noise?
+
+SPEAKER 1
+That's pretty easy.
+
+SPEAKER 0
+We figure out how long we wanted to play for. We know that we're going to play back at the same rate.
+
+SPEAKER 1
+So we're always using that sample rate to figure out how many samples equals how many seconds. Right?
+
+SPEAKER 0
+So we use that duration and the separate again to get how many total samples we've got.
+
+SPEAKER 1
+We build the way form and then we just cycle
+
+SPEAKER 0
+through and we just assign a random value.
+
+SPEAKER 1
+But this random value needs to sit on the same
+
+SPEAKER 0
+range, the same range of amplitude that are sine Waves
+
+SPEAKER 1
+were which was just between positive and negative one. Right? So how do we generate a random number between positive
+
+SPEAKER 0
+and negative one? Well, we don't we generated between zero and two and
+
+SPEAKER 1
+then we subtract one and that will shift everything down. So we've got values that are between zero and one. Right? We don't know what those values are gonna be there, completely random. So what does white noise look like? What does it sound like? Um Okay, let's move this down. Okay. And it looks it's completely random that you don't see
+
+SPEAKER 0
+any kind of wave form whatsoever.
+
+SPEAKER 1
+Right.
+
+SPEAKER 0
+When you plot it out, the values are just all
+
+SPEAKER 1
+over the place. Right?
+
+SPEAKER 0
+I'm just plotting circles, but if you plotted it, you
+
+SPEAKER 1
+know from the last point to the next point you just see these lines jumping all over the place but
+
+SPEAKER 0
+it just sounds like static.
+
+SPEAKER 1
+Right? It's dirty. Right? Um So this is the easiest form of noise that
+
+SPEAKER 0
+we can generate. Um A square wave square wave has basically it's a sine wave that whenever it's positive it switches to plus
+
+SPEAKER 1
+one and whenever it's negative it switches to negative one. So that's what this um sine function here means the
+
+SPEAKER 0
+sine function just means I am am I positive or
+
+SPEAKER 1
+am I negative? Right. So it'll take on a value of -1 If it's
+
+SPEAKER 0
+less than zero.
+
+SPEAKER 1
+Sorry if the sign not not if X is less than zero if the sign of X is the sign of what's in In here is less than zero.
+
+SPEAKER 0
+Sorry? You know if X is less than zero, whatever's inside
+
+SPEAKER 1
+that function? Yes, that's right. Not the X. That we're talking about on our screens. Right?
+
+SPEAKER 0
+Our exes signed two pi F.
+
+SPEAKER 1
+T. In this particular case. Okay so that's that's easy.
+
+SPEAKER 0
+We just generate the sign the same way that we
+
+SPEAKER 1
+did before but then we just check its value if its value is greater than or equal to zero was set it to one. If it's not then we said it's a negative one. Right? That sounds a little bit different. Someone watching soccer. I heard a whistle.
+
+SPEAKER 0
+Okay so you don't see the jumps here because I'm
+
+SPEAKER 1
+just plotting the points but um basically this it jumps
+
+SPEAKER 0
+from this point to this point.
+
+SPEAKER 1
+Okay I'm not plotting lines between the points. So this jumps up here then this jumps down here. Then this jumps up here, it's a bit harsher that then.
+
+SPEAKER 0
+How would you describe this down relative to the sine
+
+SPEAKER 1
+wave? A little bit harsher. Right.
+
+SPEAKER 0
+Um It turns out the reason for this every signal no matter what shape it is can be regenerated by
+
+SPEAKER 1
+adding together different sign your sides of different frequencies. It turns out the ones you need to add together for away form like this.
+
+SPEAKER 0
+That has a very sharp change has some very because it's a sharp change it has to have some very
+
+SPEAKER 1
+fast changing sign your sides to achieve that right Which
+
+SPEAKER 0
+are high frequencies, very high pitched frequencies.
+
+SPEAKER 1
+And so this waveform has within it some really high pitched frequencies as well as the typical one that you see in a sign inside like this. Um And so there's this sort of sharper high pitch sound to the to the thing. Now I could go back and change the frequency here, Let's go back to zero which is just 4 42 to the power of zero is one. So that's just for 40 versus um way from one. So the same kind of pitch but there's a harsher like top end to it, right? So that's a square wave. Alright. Um But we get more interesting effects when we start
+
+SPEAKER 0
+to add wave forms together.
+
+SPEAKER 1
+So if I just add, I could add wave forms
+
+SPEAKER 0
+that if they are oscillating at different frequencies, they're gonna
+
+SPEAKER 1
+add together in weird ways, right? But they're gonna still ultimately end up repeating.
+
+SPEAKER 0
+Um has anyone? So there was some guitar players right in the crowd.
+
+SPEAKER 1
+How do you tune your guitar when you don't have the little tuna thing? Mhm.
+
+SPEAKER 0
+So you play two strings together? And what are you looking? What are you looking for when you play those two
+
+SPEAKER 1
+strings together? How many? Yeah, so when You hold on one particular string with
+
+SPEAKER 0
+relative to another, you're expecting the same note but when
+
+SPEAKER 1
+they're off their slightly different frequency, okay, when Those frequencies
+
+SPEAKER 0
+are really close to one another, there's an effect that
+
+SPEAKER 1
+you hear, it's like a beating effects. It's like a Well well well, well you might have
+
+SPEAKER 0
+done it in a physics class, I don't know um
+
+SPEAKER 1
+or science class, you know those tone um things that you dong and they vibrate and make the sound, what do you call those things? What do you call them? Yeah, those. Right.
+
+SPEAKER 0
+Um If you have them slightly off from one another
+
+SPEAKER 1
+and you dong them. Okay, you get this beats effect.
+
+SPEAKER 0
+Um So you know, it's it has a useful function
+
+SPEAKER 1
+but we can sort of simulate that as well.
+
+SPEAKER 0
+So here all we're doing is we're taking to um tones that we already generated in their own arrays, We passed the references for Those arrays, W one and W
+
+SPEAKER 1
+two. Um And when we had them together, they're gonna like,
+
+SPEAKER 0
+there's a potential that they might double in size this
+
+SPEAKER 1
+way. Right? So To keep that under control, we can scale each
+
+SPEAKER 0
+one of them so we Can add more of one.
+
+SPEAKER 1
+We can add equal like half of both. We shouldn't grow more than an amplitude of one. At the worst case scenario, we could add A little
+
+SPEAKER 0
+bit of one with a lot of another, right?
+
+SPEAKER 1
+We can control that, that's controlled through the amplitude. So basically we make a new this this method here
+
+SPEAKER 0
+just assumes that they're both the same size.
+
+SPEAKER 1
+Okay, that's the easiest thing to assume if you make both for the same duration and you add them together. Life is going to be a lot easier. Right?
+
+SPEAKER 0
+So we add them together, um we created result a new array and then we just check, we just make sure that they're the same length because if they're not
+
+SPEAKER 1
+the same length and we reiterate over a loop, we might look off the end of one of them. That's gonna be a problem. Right? So we only do this if they're the same length,
+
+SPEAKER 0
+otherwise we could return well we could return a result
+
+SPEAKER 1
+um that is all zeros because it's a numeric array.
+
+SPEAKER 0
+It would be initialized with zeros, but another result we could do is we could return because it's a reference
+
+SPEAKER 1
+type, we could return a reference to null. And that could be tested in the program that's calling this method.
+
+SPEAKER 0
+Um And and we could use that to say, well,
+
+SPEAKER 1
+you know, it returns now if if we couldn't generate this thing properly. Right, That's that's a possibility. But you would have to test to make sure it's not now before you try to use it. All right, So all we're doing here is we're for the like, within the loop.
+
+SPEAKER 0
+Within this four loop, we're just at the art sample of the result. We're adding together waveform one Um scaled by amplitude one
+
+SPEAKER 1
+and waveform to scale by amplitude too. Okay, and let's see what we can do here. Um Alright, so, I'm gonna create two waveforms. I need waveform one and wave form one B for example. All right, I've got to weigh forms. I've mucked around with this. Okay, that's 4 40. Let's go back to 4 40 here and I've got one that's 8 88 80 and 4 40. Um And then we wanna add them together. It's just comment that out and let's hope. Okay, let's zoom in on that a little bit. Okay, So it sounds a little bit different.
+
+SPEAKER 0
+You're actually hearing two frequencies how to tell right, chords when we play chords.
+
+SPEAKER 1
+I I do this like I I know how to play chords. I think I've learned a couple of chords. But chords, you know, you've got several frequencies going at the same time. Now. some, you can't just join any notes together and and hope that it's going to sound good. There are certain frequencies that, that have a pleasing kind of sound. Those chords are typically sets of frequencies but you could
+
+SPEAKER 0
+think of how you might make a chord sound by
+
+SPEAKER 1
+adding those frequencies together of those notes to generate like a wave form of a chord. This is a two note chord. I don't think there are many two note chords. Are there Piano players? Are there any? Probably not three or 4 or 5?
+
+SPEAKER 0
+Right, But you can see what the waveform kind of looks like.
+
+SPEAKER 1
+Well what happens when we bring that those wave forms like really close to one another. So let's go 4 44 30 the closer they get,
+
+SPEAKER 0
+you hear that, that beat effect, let's zoom out and
+
+SPEAKER 1
+look at what's happening actually. You start to get this kind of weird effects.
+
+SPEAKER 0
+So you see this there's a there's a slower sine
+
+SPEAKER 1
+wave that's giving you know, when you add these things together, you see that there's a variation that's happening slower and there's a really fast variation within it gives this beats effect. So the closer you get, like when you have frequencies really close that effect happens and it's more pronounced um
+
+SPEAKER 0
+what are we leading towards here? Why are we exploring all this stuff. Well, like when you start playing around with these things, you can come up with your own sort of sound
+
+SPEAKER 1
+effects. Um My, one of my kids has this, you know the little electronic kits where you plug little iCI's together and there's a music chip and there's like a sound effect chip. And a lot of those sound effects are generated by just mucking around with some of these wave forms and playing with their frequencies and stuff like that. Um like fire engine sounds or space aliens attacking or something like that. And Question three in lab five is to sort of come up with your own sound effect right? By manipulating these wave forms. Alright.
+
+SPEAKER 0
+Um Oops, right, so if we can do it with that, we can do it with different sine waves. We could also add different kinds of ways to get
+
+SPEAKER 1
+waves together. And if you wanted to sort of dirty up that
+
+SPEAKER 0
+pure sound, you could add noise to it.
+
+SPEAKER 1
+So you could take a stone and then make it a bit more scratchy by adding a little bit of
+
+SPEAKER 0
+noise, not a lot of noise. If you had a lot of noise you'll lose the
+
+SPEAKER 1
+original waveform and you won't hear the tone. But if you add a little bit, So maybe .2
+
+SPEAKER 0
+of the noise and point eight of the original signal
+
+SPEAKER 1
+and you display that, you'll get sort of a wave form that looks like something like this. What does that sound like? Um You got away from three. Um Is that weight from one away from 3? Let's just do half each.
+
+SPEAKER 0
+That's pretty noisy. But you can still hear the tone.
+
+SPEAKER 1
+Okay we'll be back after these messages.
+
+SPEAKER 0
+That used to be a thing now it's we'll be we're not we're just gonna give you messages.
+
+SPEAKER 1
+So let's take uh mostly one of them you get a cleaner tone but with a little bit of static
+
+SPEAKER 0
+a little bit of hissing.
+
+SPEAKER 1
+Um This is like making an image and trying to make it scratchy like an old cinema. This is like doing the same thing to um some sound now you can do this stuff we're doing it
+
+SPEAKER 0
+to pure tones here but if you can get a
+
+SPEAKER 1
+sound file and get the music and add a little bit of noise. So you can scratch up you can scratch up the you can make it a little bit staticky. Maybe you want to make a sound or a piece of music sound a little bit more like it's running on a record and an old LP player or something you know with the needles? You know those you know you know about those right like record players before C. D. S. C. D. S are extinct too. Um You wanna know what a mini disc is? A magnetic tape? Yeah. Um So so you can you can get different effects all right? Um So we looked at different tones of different frequencies
+
+SPEAKER 0
+really close frequencies you get these beats effects harmonics what harmonics are are just if you take um a frequency and you generate a set of tones that are like integer multiples of that frequency and you add them together, you get harmonics, harmonics tend to go together a little
+
+SPEAKER 1
+bit better. And so when you look at chords and things, they're
+
+SPEAKER 0
+typically frequencies that are in that are kind of considered
+
+SPEAKER 1
+to be harmonics because they're multiples of one another typically. Um So I won't go into that but chords are sort of related to harmonics. Um Right, so we also have amplitude articulation.
+
+SPEAKER 0
+Um So this is when we start to modify the amplitude of the wave form, like so far with the only modification we've done is when we've added noise and
+
+SPEAKER 1
+sometimes the noise has changed a little bit. Um But we could we could basically to generate certain
+
+SPEAKER 0
+types of effects. We can like decay for instance, decay is basically a tone and you want it to gradually fade away but
+
+SPEAKER 1
+you want the tone still to be there. So you take away form and then you just multiply
+
+SPEAKER 0
+it by a value that's sort of decaying slowly and
+
+SPEAKER 1
+you'll get it fading away right to nothing. A staccato does that very quickly. So it's like staccato gives you the sensation of the note but it doesn't go forever. It's just a very it's like a succinct and it has a different kind of feel to it than um
+
+SPEAKER 0
+llegado, which is the normal, like a note that just
+
+SPEAKER 1
+keeps playing. Um All right, so there's lots of ways we can
+
+SPEAKER 0
+achieve this sort of thing. Um I've got some code that I'm going to post for you to have a look at, I'm not going
+
+SPEAKER 1
+to run all of it.
+
+SPEAKER 0
+Um But you know the the easiest way to do a decay is In in the question two in lab
+
+SPEAKER 1
+five. The first question looks at making a chirp um a
+
+SPEAKER 0
+chirp is like a change in the frequency but this
+
+SPEAKER 1
+is a change. This this here we're talking about is a change in the amplitude.
+
+SPEAKER 0
+So this is just the same as increasing or decreasing a variable that you've done in past labs, right?
+
+SPEAKER 1
+You're either increasing or decreasing the amplitude.
+
+SPEAKER 0
+What you're multiplying is sine wave by right or um increasing or decreasing the frequency you're using to calculate your
+
+SPEAKER 1
+sine wave so you can gradually do that and get different effects. Um Right, so LLegado is unchanged.
+
+SPEAKER 0
+Sine wave as the cardo just drops off very quickly
+
+SPEAKER 1
+and the decay drops off more slowly.
+
+SPEAKER 0
+Um I think maybe I can show you a decay
+
+SPEAKER 1
+actually, I can show you, so we know what LLegada sounds like, that's just a typical sine wave. So this is staccato, it's just it's just a very
+
+SPEAKER 0
+succinct kind of um sound at that time.
+
+SPEAKER 1
+Oops, see it happens, it happens to me too, Sorry, I've got an out of range um because I because I fixed this, let me just do um part of it. So the same kind of thing but just fades for a bit longer right now.
+
+SPEAKER 0
+Speech is basically using this articulation but you're you would grow. So for a vow if you because we say a vow is finite in time, it's not it doesn't go
+
+SPEAKER 1
+forever unless we're singing right? I say ei you when you look at the speech signal and maybe I'll bring some examples of this. You'll see when there's an E. Sound. It's sort of a frequency like a sine wave but it grows and shrinks E. It's articulated and I like E. Vs. Are right. The frequency that still be in these little envelopes, much
+
+SPEAKER 0
+like this sort of this sort of effect. But we grow and we shrink.
+
+SPEAKER 1
+Right? And and if you if you create these things and concatenate them together you can create something that will sound like Stephen Hawking. You know like it'll sound like this sort of speech
+
+SPEAKER 0
+but kind of a little bit electronic speech.
+
+SPEAKER 1
+You can do this sort of thing but it would just be just be sounds really right. Okay so we call that articulation but we can have
+
+SPEAKER 0
+frequency articulation as well.
+
+SPEAKER 1
+And the chirp that you're looking in the in the lab. I'll let you explore that in the lab is basically an example of this um then you have things like so the church basically just increases your frequency throughout the waveform. So if it's if it's increasing in frequency it's getting, is it getting bigger wave form or smaller in time. If my frequency is increasing higher frequency is smaller, right? So my waveform is gonna start out slow and then it's gonna compress, right, this is a chip chirp in a high pitch direction but you can also have a chirp that starts out high and then gets slower. It'll be like a oh this kind of sounds right?
+
+SPEAKER 0
+Tremolo and vibrato. So tremolo just does a periodic change in the amplitude.
+
+SPEAKER 1
+So it'll change the amplitude but it will change it according to a sine wave. So you have a sine wave multiplied by your sine wave. It would just make the original sine wave grow and shrink like the beats effect, like what we saw in the beats effect. And so that you'll hear something like the bates effect, you'll hear this whoa, whoa, whoa, whoa, whoa, whoa, that's
+
+SPEAKER 0
+that's a vibration in in amplitude. Um And then you have vibrato which is actually a change in the frequency itself.
+
+SPEAKER 1
+So it's changing the shape of the wave form this way. So it's getting thinner, fatter thinner. Fata Fata and and that has a different kind of sound to it as well. Alright. Um But I'll let you experiment because these are standard
+
+SPEAKER 0
+kinds of approaches to effects but you will still get weird sounding staff by trying to mess up your your
+
+SPEAKER 1
+waveform right, you don't have to follow one of these particular types of sound effects, You can still come up with some weird sometimes you make a mistake and you get this interesting sound that they think oh that's a good sound of um a character going splat when it hits the target in my in my uh application. Right. Alright, Okay.
+
+SPEAKER 0
+So um I just wanted to give you some basic idea there. We've got maybe seven minutes And um in the last seven minutes I just wanted to digress a little bit and just talk about objects or other things that we can use to read data in from files um and other data types other than a raise that can be
+
+SPEAKER 1
+useful. Um Just to introduce the idea, you can try it out. It should be enough for you to do Lab five. But we'll talk more about how we can, you know, save and read data from files into our programs um as we continue in the course. Right? So um so the other useful reference types.
+
+SPEAKER 0
+So we talked about a raise. But there are these things called lists or array lists. There's also lists but array lists um are data structures that act like an array but they're dynamic like we can grow them.
+
+SPEAKER 1
+So the thing about an array is when you you
+
+SPEAKER 0
+have to set it, it's fixed in size.
+
+SPEAKER 1
+An array list actually grows in size and shrinks as you add things and remove things from it but it's
+
+SPEAKER 0
+a reference type that has a whole bunch of methods
+
+SPEAKER 1
+that allow you to do that so you can add things to it. Um You can remove things, you can search for things, you can do things like that annoying question in the
+
+SPEAKER 0
+last lab, what was it shuffle?
+
+SPEAKER 1
+There's a method to do the shuffle. Right.
+
+SPEAKER 0
+You can't do that on a raise and no, you
+
+SPEAKER 1
+can't use array list for the lab before you have to do it on the rate so that you can appreciate when someone's built something like an array list that does it for you.
+
+SPEAKER 0
+Right? So there's a bunch of different array lists. Um There's integer versions, there's string version, string list in list, float list, and then there's the general array list which um usually what that's for is when we want to create like an array of other objects.
+
+SPEAKER 1
+So I wanted to create an array of vectors or an array of images or an array of whatever. Right? An array list of these things. Um I've got a general one that I can use, so we'll come back to more on that later. But I just wanted to show you um there there
+
+SPEAKER 0
+how much more convenient they are than a race. So they have a set of methods. So a string list for example and that's what we're gonna use. That's what we can use to conveniently read in uh
+
+SPEAKER 1
+data from a file.
+
+SPEAKER 0
+Um They have methods like um clear which will delete all the elements in that list. They have methods like setting a value at a particular location, removing a value altogether, appending a value to the end of the list. Then they have things like reverse. If I wanted to reverse all the elements in the
+
+SPEAKER 1
+list or if I wanted to shuffle them, I just
+
+SPEAKER 0
+invoke these methods on the objects once I've put elements in it and I can do that.
+
+SPEAKER 1
+Right?
+
+SPEAKER 0
+So if you want to get um if you have an array and you want to get um you want to access it in a random order but you want to see everything in the array, you can make an array list of all the indexes, shuffle them and then go through the array list. Use the index to look in the array. Um Lots of convenient stuff. Um with these objects enlist has a little bit more because you you you're with numbers, you can you can add things and divide on some of the elements.
+
+SPEAKER 1
+So it's got a little bit more stuff supported.
+
+SPEAKER 0
+Um And so just there's a comparison here. Still got three minutes guys, there's a comparison here in a previous slide. We we looked at an inventory of strings that we're adding to an array and this is the string list version of that.
+
+SPEAKER 1
+Okay, the string list version.
+
+SPEAKER 0
+So you create a new object and you in stan she ate it.
+
+SPEAKER 1
+Okay.
+
+SPEAKER 0
+It uses a constructor. Right? The default constructor has nothing in it. So it creates the list but the list is empty. And then whenever I have something that I want to add to the list, I can just use the pen. So I append another string, penned another string so on and so forth.
+
+SPEAKER 1
+I can check how many elements I've got in it. I can I can get elements at a particular index and so on. Right.
+
+SPEAKER 0
+There's no need for establishing a size for this thing
+
+SPEAKER 1
+at the outset.
+
+SPEAKER 0
+Like you have to do with an array and you don't have to go low level and build things to
+
+SPEAKER 1
+look for maximum values and all this sort of stuff as well that a lot of that functionality is already built into the list. Right?
+
+SPEAKER 0
+You're gonna get more practice with that. There's a couple of examples here of um you know, reversing for example or sorting, sorting in alphabetical order.
+
+SPEAKER 1
+Like to do that with a string.
+
+SPEAKER 0
+You'd have to go through every string. Look at the first characters, sort them. Look at the second characters, painful with an array.
+
+SPEAKER 1
+Right? But with with a list, there's a method that already does it for you.
+
+SPEAKER 0
+So there's lots of things you can do with them. What do we care about? We care about reading from files. So there's one method you need to know for this and please come back and look at this lecture when you're trying to do your lab five. And that is that there is a method called load strings that you pass a file name that will load all of the lines in a text file directly into an array of strings.
+
+SPEAKER 1
+And then um the rest of these slides just look at how we can then process that.
+
+SPEAKER 0
+And and the example actually looks at how we can process it with an array list, right with a string list to get rid of lines that we don't want,
+
+SPEAKER 1
+right, keep the lines that we want and then get
+
+SPEAKER 0
+data from each one of those lines. So have a look at it and we'll talk more about it on friday.
+
+SPEAKER 1
+Okay.

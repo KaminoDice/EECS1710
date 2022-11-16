@@ -1,0 +1,1814 @@
+SPEAKER 0
+Okay. All right.
+
+SPEAKER 1
+So today guys just have some quiet. I'm just going to go through. I'm just gonna spend today going through the lab test to. We'll just put the slide the image topic on hold for a moment.
+
+SPEAKER 0
+Okay.
+
+SPEAKER 1
+I only posted these overnight so I don't know if
+
+SPEAKER 2
+you've had a chance to look at them yet.
+
+SPEAKER 1
+I'm not going to do all of it. I'll leave something for you to do and then I'll post the solution um on the weekend. Right? So try and have a crack at this so that you've still got an opportunity on monday to come and
+
+SPEAKER 2
+ask questions if you're having trouble with any of this?
+
+SPEAKER 0
+Has anyone had did anyone realize that this was posted
+
+SPEAKER 2
+and and had a chance to have a look.
+
+SPEAKER 0
+No. Okay. Yeah. One of you. Yeah.
+
+SPEAKER 1
+Did you have a look at it?
+
+SPEAKER 2
+Okay. Um Have you tried to do it yet? No. Okay. Just had a quick look.
+
+SPEAKER 1
+Alright. Um So the first thing is. Alright, so they're just on the lab test section, there's a there's a link on the class website.
+
+SPEAKER 0
+So if you're looking for this on Discord, it's not
+
+SPEAKER 2
+on Discord. You have to go through E class.
+
+SPEAKER 0
+Go down to lab tests to The Lab Test one
+
+SPEAKER 1
+and there will be two tests.
+
+SPEAKER 0
+Um Only one of them has the sample, the starter
+
+SPEAKER 2
+code for you though. I haven't had a chance to put together start a code for the other sample tests but the questions are there so you can still there's nothing to submit to.
+
+SPEAKER 0
+Okay. There's nothing to um like the directories are not open
+
+SPEAKER 2
+for submission even though they're referenced in the test, but
+
+SPEAKER 0
+um, but there should be enough information for you to
+
+SPEAKER 1
+get an idea.
+
+SPEAKER 0
+Um if I get a chance, I'll post some starter
+
+SPEAKER 2
+code for the 2nd 2nd 1 as well, I'll explain. I'm just gonna go through some of the starter code to explain because it is more helpful for the starter
+
+SPEAKER 1
+code and and and to use it. And and I'm saying this because what I noticed in the first lab test, a lot of you actually um never really like you downloaded the starter code but you never really use that right?
+
+SPEAKER 0
+Uh whether that's because you downloaded it somewhere and then
+
+SPEAKER 1
+you're in the sketchbook already and you started opening up or you've just been doing this maybe um, you weren't present for the dry run.
+
+SPEAKER 2
+You've just been doing this for all of the labs um where you just open a brand new empty file and just start working on the question, is there any
+
+SPEAKER 1
+anyone that does that? It's fine to do it.
+
+SPEAKER 2
+It just means it's more difficult when it comes to submitting right? And you might make some error submitting. But I know some of you have been working that
+
+SPEAKER 1
+way is anyone who's been working that way and didn't really use the starter code.
+
+SPEAKER 0
+It's okay if you if you did know I know there are because I I saw it right during the
+
+SPEAKER 2
+test and I see it during the lab sometimes too.
+
+SPEAKER 1
+So um so basically like when you download this file,
+
+SPEAKER 2
+okay, I'm doing it on Machias.
+
+SPEAKER 1
+So it's different from in the in Linux, but it'll it'll basically um you can double click on the file or you can right click on it and say extract
+
+SPEAKER 0
+right um wherever extracts, like make sure you know where
+
+SPEAKER 1
+that is, okay, don't forget about where that is. If you follow the instructions on the test and these are not different from the last test.
+
+SPEAKER 0
+Right?
+
+SPEAKER 1
+So can I encourage you to, you know, it says double click on the file to open the archive, it doesn't say just click anything else just to finish it, it says specifically select the folder because sometimes they have like a Mac folder there as well. The mac os folder.
+
+SPEAKER 0
+Okay, you don't need that, You don't want that. So you select this folder right? That has a test in it.
+
+SPEAKER 1
+On the actual test, it will be just called test
+
+SPEAKER 2
+to whatever whichever version you're going to get.
+
+SPEAKER 0
+Um select it then press extract.
+
+SPEAKER 1
+Okay if you do that then um when you open a terminal, you should be able to cut and paste this text, paste it straight into the terminal and it will be like your folder will be in the right position.
+
+SPEAKER 0
+Uh and so it will automatically put you in the
+
+SPEAKER 1
+right directory to do that last command there is submit.
+
+SPEAKER 0
+And the submit should work now. Don't wait Till the last five seconds of the lab test. Like I can't stress this enough.
+
+SPEAKER 1
+Don't even wait for the last 10 minutes or 15 minutes because you'll be in a panic trying to do
+
+SPEAKER 0
+this and if you see an error then you'll be
+
+SPEAKER 1
+even more of a panic. And like I had some people like fortunately were able to recover stuff as long as you save it, right? But if you're in this in the window here, the problem with um sorry, I should just change the font
+
+SPEAKER 2
+size on that. Um I have to keep going back and forth because I can't I'm Not old enough to need the 36
+
+SPEAKER 0
+the large front when I'm normally looking at it, but I am starting to go a bit blind when you
+
+SPEAKER 1
+change something in this file. It doesn't it doesn't really it's not clear clearly indicating to you that you haven't saved it.
+
+SPEAKER 0
+Right?
+
+SPEAKER 1
+So just make sure you press control save or command save control S or command S I mean you're in
+
+SPEAKER 0
+the lab, so it's control S right constantly at the
+
+SPEAKER 1
+very least um you you shouldn't have to pick somewhere to save it if you get your in the lab test and you try to save and it asked you where to save. You didn't open up the starter code properly.
+
+SPEAKER 0
+Okay?
+
+SPEAKER 1
+And then it's gonna ask you from for some location, you're gonna pick some location, you're gonna call it the file that that you think it's supposed to be called and then when you go to do this it won't find it, right? Because even if you called it the same name, you probably saved it somewhere else.
+
+SPEAKER 0
+Okay. So don't do that and and don't if it says
+
+SPEAKER 1
+sketch up here, don't use it.
+
+SPEAKER 0
+Right.
+
+SPEAKER 1
+The first thing you should do is you should go download that file which already I think I already did
+
+SPEAKER 0
+here.
+
+SPEAKER 2
+Um I've downloaded a few times. Let's download it one more time. Right? Um I've already extracted it. Right?
+
+SPEAKER 0
+So it's not gonna be in your downloads folder here.
+
+SPEAKER 1
+It's going to be in on on the Linux system. You'll see it.
+
+SPEAKER 0
+I think it downloads to your home directory when you
+
+SPEAKER 2
+download.
+
+SPEAKER 0
+Okay?
+
+SPEAKER 1
+But when you press extract after you press extract, it'll say open the file with the fault where the files,
+
+SPEAKER 0
+sorry, open the folder where the files are that you
+
+SPEAKER 1
+just extracted.
+
+SPEAKER 0
+If you do that then you'll you'll see that the
+
+SPEAKER 2
+files have extracted and you don't have the multiple copies.
+
+SPEAKER 1
+If you have multiple copies, delete one of them and don't start working until you're you know you're working on one copy. Okay?
+
+SPEAKER 0
+Um All right then just pick the test file. Right? So I've set these ones up. Um So that all the files are in one project
+
+SPEAKER 1
+like we've been doing from lab four onwards.
+
+SPEAKER 0
+Okay?
+
+SPEAKER 1
+So you won't need to open up separate files then you can just get rid of this automatic sketch that
+
+SPEAKER 2
+comes up and the code will have stuff in it already. Okay, So if you're opening up and working on an
+
+SPEAKER 1
+empty file, you started wrong.
+
+SPEAKER 0
+Okay. Now some of you know your way around enough that
+
+SPEAKER 1
+you're comfortable doing that, that's fine.
+
+SPEAKER 2
+I'm not I'm not saying you have to do it this way, but if you don't do it this way
+
+SPEAKER 0
+and you have trouble submitting at this point, that's your
+
+SPEAKER 1
+problem.
+
+SPEAKER 2
+It's not my problem.
+
+SPEAKER 0
+Okay. I don't the reason your marks are late for lab
+
+SPEAKER 2
+test one is because I have to go and unpack
+
+SPEAKER 0
+all of the directories that were backed up to find
+
+SPEAKER 2
+your files and some of you have multiple versions of it.
+
+SPEAKER 0
+Right?
+
+SPEAKER 2
+So um but I will post some solutions and Stuff for Lab Test one If you want. You don't need those necessarily for lab test too, but just so you can have a look, you probably remember how you answered or didn't um Actually I post some
+
+SPEAKER 1
+solutions and I can also um make your submission available
+
+SPEAKER 2
+to you through web submit so you won't be able to submit to it, but I can change it so that you can see what you submitted right now if
+
+SPEAKER 1
+it's empty. Don't panic because I'm probably recovering the file, but if you if you modify these files right? And do something, make sure you save them.
+
+SPEAKER 0
+If you don't save them when you do submit, it's
+
+SPEAKER 1
+going to submit the original version which is empty.
+
+SPEAKER 0
+Okay. So don't do that.
+
+SPEAKER 2
+So these are just all the caveats.
+
+SPEAKER 0
+I think it's just you know, getting used to the
+
+SPEAKER 2
+experience and all that.
+
+SPEAKER 0
+So so you have these questions and um there will
+
+SPEAKER 1
+be some code in there. So basically the way I've set this lab test up
+
+SPEAKER 0
+is that Is like the labs four to six. Okay. You'll have there will be a question already set up
+
+SPEAKER 2
+a method. Okay.
+
+SPEAKER 1
+And that question method will probably have something in it already that calls the method I want you to complete.
+
+SPEAKER 0
+Okay. So you don't have to do anything with that method.
+
+SPEAKER 1
+There are lots of warnings, messages saying don't modify this.
+
+SPEAKER 0
+You can at the end of the day, I'm just
+
+SPEAKER 1
+gonna mark the method, right?
+
+SPEAKER 0
+So you can do whatever testing you want. But I've got some tests.
+
+SPEAKER 1
+It's easier for me to run them if you just finish this method and I can substitute in my file and run your method right?
+
+SPEAKER 2
+To test it.
+
+SPEAKER 0
+Okay.
+
+SPEAKER 2
+Or we might just look at the code and market whatever.
+
+SPEAKER 0
+So um look at what is said to complete.
+
+SPEAKER 2
+Okay, and do that.
+
+SPEAKER 0
+Don't waste your time rebuilding all of this stuff. And it's not.
+
+SPEAKER 1
+So this first question by the way is one of
+
+SPEAKER 2
+the ones I'm not going to go through.
+
+SPEAKER 0
+So there's four questions in this lab test four, I didn't know.
+
+SPEAKER 1
+No sound effects, no panic, they're not as densely um
+
+SPEAKER 0
+You know, there's not as dense such a dense amount
+
+SPEAKER 1
+of information about each of those. I think a lot of you when you see a lot of dense information uh it's it's a sign to
+
+SPEAKER 2
+say basically don't read this now. When what I mean is read this then you know
+
+SPEAKER 1
+what to do instead of trying to do all these
+
+SPEAKER 2
+things that it's not asking you to do?
+
+SPEAKER 0
+All right, so Question one is a loop question. Okay uh You don't need any arrays to do this generally this first question so there will be one question.
+
+SPEAKER 1
+Might not be question one, but there'll be one that's
+
+SPEAKER 2
+just on loops.
+
+SPEAKER 0
+Um And you just sort of you're just generating a
+
+SPEAKER 1
+table here, but you need a loop to do it
+
+SPEAKER 0
+right now.
+
+SPEAKER 1
+You could do it manually. You could do it manually. Well, but why would you do that? You could copy and paste this.
+
+SPEAKER 0
+Right, paste it into your code and then put print
+
+SPEAKER 1
+statements there to do it.
+
+SPEAKER 0
+But guess what the method is expecting? Oh no, I didn't have a variable in there for
+
+SPEAKER 2
+n I think the the methods it has a variable
+
+SPEAKER 1
+in there for end but I might change end.
+
+SPEAKER 0
+Right?
+
+SPEAKER 1
+You have to create the variable, it's not passed to this particular method at least not in my starter code.
+
+SPEAKER 2
+Um But if it's if it's it's not the starter
+
+SPEAKER 1
+code will give you a method header or it will tell you in the in the question what the method header should be.
+
+SPEAKER 2
+So you know what arguments should be passed to it.
+
+SPEAKER 0
+Right? But if there's an argument passed to it and you
+
+SPEAKER 1
+hard code, it it's not gonna work if the argument changes, is it?
+
+SPEAKER 0
+Right. So keep that in mind now, if you're panicking and
+
+SPEAKER 1
+you can't get anything done and you're trying to recover some kind of marks, then go ahead and do that.
+
+SPEAKER 2
+That's fine. But you won't get all the marks for it.
+
+SPEAKER 0
+Right, Okay.
+
+SPEAKER 2
+Even though it looks like this.
+
+SPEAKER 0
+All right.
+
+SPEAKER 1
+Um so that one's pretty straightforward.
+
+SPEAKER 2
+Just use the power so I explain in here for those of you don't know what that means, that's what
+
+SPEAKER 1
+that means.
+
+SPEAKER 2
+It means into the power of whatever. Okay, so you need the power method and a loop. Very basic question.
+
+SPEAKER 0
+Okay.
+
+SPEAKER 2
+And maybe some formatting if we're restricting the decimal places.
+
+SPEAKER 0
+All right.
+
+SPEAKER 2
+Not a big deal. Okay, so then um then we've got a question on
+
+SPEAKER 1
+arrays. Usually some kind of um numeric type of array.
+
+SPEAKER 0
+Okay, this is sort of this question is in the
+
+SPEAKER 1
+same kind of um bent as some of the questions you see on coding bat.
+
+SPEAKER 2
+So if you want to practice some go there.
+
+SPEAKER 0
+Okay, so um this question I'll talk about it, but
+
+SPEAKER 1
+there's one question I want to focus on actually doing,
+
+SPEAKER 2
+which I think is a harder question from part B like test B um that I'll start with which sort of covers some of the things that you need for these ones.
+
+SPEAKER 0
+Um So this question is just it's got an array.
+
+SPEAKER 1
+Okay, This is not how you specify an array, right? It's but it's it's giving the indication of what's in
+
+SPEAKER 2
+the array, but that's not how you would do it in code.
+
+SPEAKER 0
+All right, So don't just copy this, thinking that's how
+
+SPEAKER 2
+you do it.
+
+SPEAKER 1
+I mean that's part of what we're testing.
+
+SPEAKER 0
+Okay. Umm the idea here is that if you've got an
+
+SPEAKER 1
+array events it might you don't know how long it's going to be but it's some length, right?
+
+SPEAKER 0
+You Know, you know that its length is greater than
+
+SPEAKER 1
+or equal to two, so there's going to be at least two elements. And you're looking at the first element and the last element and you're comparing them right?
+
+SPEAKER 0
+It says um the method will figure out which of
+
+SPEAKER 1
+the two.
+
+SPEAKER 0
+The first and last is larger and it will set
+
+SPEAKER 1
+all of the elements to be the larger value.
+
+SPEAKER 0
+Okay?
+
+SPEAKER 1
+So in the first one here you can see there's a one and a three and it's set all the elements to three.
+
+SPEAKER 0
+Okay.
+
+SPEAKER 1
+Now, when I go into the code here um you can see that this is the method we're supposed to complete and it's expecting you to return an integer array
+
+SPEAKER 0
+right now, so that could be I make the changes
+
+SPEAKER 1
+directly on this array and then I assign um the
+
+SPEAKER 2
+result, like I work on this array and then I
+
+SPEAKER 1
+assign I return this reference, right?
+
+SPEAKER 0
+This just means I'm returning a reference to an array
+
+SPEAKER 2
+of vintages.
+
+SPEAKER 0
+Okay? Or You could create a whole new one and then
+
+SPEAKER 1
+populate that, right?
+
+SPEAKER 2
+So you want to create the same size, so let's do this question.
+
+SPEAKER 0
+Um Well there's lots of ways we could do it, but you might see something like this as well and
+
+SPEAKER 1
+the reason this is in here is not because that's the answer, but because um if there's any error in some of the code syntax error, then it won't run, even though you might be working on another part of
+
+SPEAKER 2
+the question, nothing will run in the project.
+
+SPEAKER 0
+Right. So returning null is just returning a null reference for this, It's not an answer.
+
+SPEAKER 1
+It's expected that you're going to fix that, right?
+
+SPEAKER 2
+You have to return the right type but by returning
+
+SPEAKER 1
+null.
+
+SPEAKER 0
+Now this method doesn't do anything but there's no syntax
+
+SPEAKER 2
+errors whenever you have a method that expecting a return
+
+SPEAKER 1
+value if I don't have one, um it's gonna complain.
+
+SPEAKER 0
+Right?
+
+SPEAKER 1
+And then I can't run question one, for instance.
+
+SPEAKER 0
+Okay, So sometimes I haven't fixed those sorts of things
+
+SPEAKER 1
+in the labs, but I usually have them in the lab tests because otherwise people panic and then they think, oh no, it doesn't work, you know, I can't, I've written my method in question one and it should work. What's going on? Like why is my program not running?
+
+SPEAKER 0
+Right, so just um look out for that.
+
+SPEAKER 1
+But I try, this is another reason why you want to use the starter code.
+
+SPEAKER 0
+Okay, Don't work off your own file. Right?
+
+SPEAKER 1
+And the second reason more important than that, is that
+
+SPEAKER 0
+there's a whole bunch of example cases here right now, do you want to write, spend your time in the
+
+SPEAKER 1
+lab lab test writing all of the tests to run on your code? I don't think so.
+
+SPEAKER 0
+So when there's like lots of examples like this um
+
+SPEAKER 1
+that question method usually will have some tests already built
+
+SPEAKER 2
+into it.
+
+SPEAKER 0
+Okay, so Here I've got five tests, I've already got
+
+SPEAKER 1
+the code here that's going to um it's going to print something like what the expected result is and then
+
+SPEAKER 0
+um print what the actual result is as well.
+
+SPEAKER 2
+Um Yeah, the actual is over here, so if I
+
+SPEAKER 1
+run this now I'm returning null.
+
+SPEAKER 2
+Oh hang on, that's not going to run because I have to uncommon that question. Right?
+
+SPEAKER 1
+Most of this stuff is done in the console.
+
+SPEAKER 0
+Um So that's gonna be a problem until I've written
+
+SPEAKER 2
+something because um I'm trying to access that array and print it right, but it's return null.
+
+SPEAKER 0
+So you know, I might not be able to run
+
+SPEAKER 1
+the test properly until I've done I've at least tried
+
+SPEAKER 2
+to return like some integer array.
+
+SPEAKER 1
+So let's just do this question really quickly.
+
+SPEAKER 2
+Um All right.
+
+SPEAKER 0
+So I'm going to create a whole new array called result. Yeah, let's get rid of this. Okay. Um and I want to initialize it. So how do I do that?
+
+SPEAKER 1
+It's got to have the same number of elements in
+
+SPEAKER 0
+it. Right.
+
+SPEAKER 1
+The result array has to be the same number of elements as the input array.
+
+SPEAKER 0
+Okay.
+
+SPEAKER 1
+It's just that we're going to change what those elements
+
+SPEAKER 0
+are. Right? Depending on that input array.
+
+SPEAKER 2
+So we want a new inter ray.
+
+SPEAKER 0
+Okay. How big is the inter eh and if you're answering
+
+SPEAKER 2
+on discord or you're answering on I'm not looking at that page so I can't see if you're answering in the chat window, but for those of you here, Right.
+
+SPEAKER 1
+How big is the array?
+
+SPEAKER 2
+How big should it be the same length as the
+
+SPEAKER 1
+input one.
+
+SPEAKER 2
+Right. How do we get that input array.
+
+SPEAKER 0
+Dot length?
+
+SPEAKER 2
+It's an array.
+
+SPEAKER 0
+Right.
+
+SPEAKER 1
+What if it was a string and we wanted to
+
+SPEAKER 2
+build a string that was the same size as another string.
+
+SPEAKER 0
+Right? No string is an object. Right. So we'll get two objects in a second, but it's
+
+SPEAKER 2
+not like when if it's if it's an object it's going to be a method that you need to call.
+
+SPEAKER 0
+Right? Um unless unless it's like p vector for for instance
+
+SPEAKER 1
+and the examples I have here with the vector P
+
+SPEAKER 2
+vector had X and Y. As attributes.
+
+SPEAKER 0
+So it doesn't you have to check right and see
+
+SPEAKER 2
+whether that thing is an attribute or not.
+
+SPEAKER 1
+But typically strings don't have those that don't have attributes that you can see to access them.
+
+SPEAKER 0
+You have to run a method.
+
+SPEAKER 2
+Okay. That's the difference between the object and not. All right.
+
+SPEAKER 1
+So we make this um result. Okay it's telling me here you haven't used it yet.
+
+SPEAKER 2
+Yeah we know that.
+
+SPEAKER 1
+Okay so we want to we want to reiterate I equal zero from I.
+
+SPEAKER 0
+S. Zero to um Well now we can say result dot
+
+SPEAKER 2
+length because we made it the right size.
+
+SPEAKER 0
+It's always a good idea if if you're modifying an
+
+SPEAKER 1
+array, iterate over it and not the one that another
+
+SPEAKER 2
+one you're looking at even if they're the same size or pick the thing that's less typing. Which which I don't want to type all of that.
+
+SPEAKER 0
+Um Okay I Plus plus. Okay This is a very simple example 1st. Okay so so now we want to um so the
+
+SPEAKER 1
+question is saying we've got to compare the first and
+
+SPEAKER 0
+the last element. Right so okay let's just grab the elements.
+
+SPEAKER 2
+They're integers.
+
+SPEAKER 0
+The first element is at what input array how do
+
+SPEAKER 2
+we access the first element?
+
+SPEAKER 1
+I know how to do this guys.
+
+SPEAKER 2
+What do you what do you think? Okay there you go. Too slow.
+
+SPEAKER 0
+Okay, input uh in Puerto Rey ah um how do
+
+SPEAKER 2
+we get the last element?
+
+SPEAKER 0
+Yeah length minus one. Yeah. Length of what does it matter? Well, as long as we're looking in the right place,
+
+SPEAKER 2
+I could use a result here because it's the same length but uh input array dot link minus one.
+
+SPEAKER 0
+Okay, that's the last element.
+
+SPEAKER 2
+What's the middle element?
+
+SPEAKER 0
+Mhm.
+
+SPEAKER 2
+What's the middle element, number two, length over to Yeah.
+
+SPEAKER 1
+Okay, so what if the length is even Yeah, is length and integer A float.
+
+SPEAKER 2
+Interject because we use it in the index site uh
+
+SPEAKER 1
+and indexes they can be introduced or floats or both. It has to be an integral Ok, you can't index between elements, you can only index whole numbers. Okay, so it has to be afloat um so you can do some calculation to get a position in the
+
+SPEAKER 2
+array but you've got to make sure that that's going to convert to an integral or that it is an integral. You know, the program will probably editor will probably complain at you anyway if it's not so it'll probably be a syntax error but yeah like if if length is
+
+SPEAKER 1
+odd.
+
+SPEAKER 0
+Right? Um into two divisions. Fine. Right.
+
+SPEAKER 1
+So if if length length is even there's an even number of elements, I'm going to have the same number on each side and so the float halfway point would
+
+SPEAKER 2
+be a decimal and it's going to enter the division is just going to go to the last one of the first half of those elements Right. Same in both ends.
+
+SPEAKER 0
+If it's odd, it's Going to find the Middle one
+
+SPEAKER 2
+directly, Right?
+
+SPEAKER 0
+So if it's seven, I'm gonna have three on each
+
+SPEAKER 2
+side and one in the middle.
+
+SPEAKER 0
+Okay, seven on two, three, Not 3 1/2. Okay, images. Alright, so that's fine. Um Alright, so we find the first and the last
+
+SPEAKER 1
+and we're saying okay, um so we we basically want to say is if the first is larger than the
+
+SPEAKER 0
+last, then what do we want to do? There's only two things we want to do.
+
+SPEAKER 2
+We either want to use the first element or use the last element.
+
+SPEAKER 0
+Right? We're inside the loop still. Okay, so inside that loop, if the first is greater
+
+SPEAKER 1
+than the last, that's the one we want to use.
+
+SPEAKER 0
+Alright, so we want to say result at the current element is equal to first, otherwise result alright, is equal
+
+SPEAKER 2
+to last, Right?
+
+SPEAKER 0
+Um so there's one thing we noticed here every time
+
+SPEAKER 1
+I goes up, is this going to change so we can keep it there, it's never gonna change.
+
+SPEAKER 2
+Right? So we're always our first and last is always going to be the same but we don't need to keep it there and calculate it every time either because we only really need that once. So we could pull that outside it's not gonna make much of a difference, it's just you know, it's going to be a fraction of a microsecond slower, right? You won't even notice.
+
+SPEAKER 0
+Okay.
+
+SPEAKER 1
+But if I pull that out um oops, what didn't
+
+SPEAKER 2
+I do? Did I delete something? I deleted something.
+
+SPEAKER 0
+Okay, so I don't have to be in a loop
+
+SPEAKER 1
+to index an array.
+
+SPEAKER 0
+Okay?
+
+SPEAKER 2
+I don't have to if I know exactly where I want to look, I can do that first, I can do that outside of the array. Now, if the position is somehow changing, then it's a different story. Like if I if I want to look at a different position at different times, then I probably need to do that inside the array.
+
+SPEAKER 0
+Okay? Um Okay, so and then I don't want to return, so at that point once I've gone through the whole
+
+SPEAKER 1
+array, I would have set them all to first or
+
+SPEAKER 2
+all to last.
+
+SPEAKER 1
+What if they're equal, first and last, it doesn't matter what I said, It too. Doesn't matter. So I can so this is fine if they're equal,
+
+SPEAKER 2
+it's gonna set everything to last, but they're equal. So it's the same as setting up the first, won't matter.
+
+SPEAKER 0
+Okay. Um Right. But anyway, you might, you know, it might be a
+
+SPEAKER 1
+little bit trickier than that and you might notice set
+
+SPEAKER 2
+this up first, go.
+
+SPEAKER 0
+But as long as you're returning a result there, make
+
+SPEAKER 1
+sure that your array is declared before you start to use it if you've just done this right or you've just done yeah. You might do something like this result equals uh instead
+
+SPEAKER 2
+of equaling a new array, you could also do result equals input array.
+
+SPEAKER 0
+Right?
+
+SPEAKER 2
+You could do that.
+
+SPEAKER 0
+I would be aware of doing this unless you have
+
+SPEAKER 1
+explicitly asked to modify the same array.
+
+SPEAKER 2
+Okay. So when we're doing swaps and things like that, um
+
+SPEAKER 1
+it's not going to be an issue here because every time we assign something, um we're never trying to assign something from an element that we haven't seen yet.
+
+SPEAKER 0
+Okay. Um Right.
+
+SPEAKER 1
+In this particular case, but if ever we were trying to assign something from input which also had an index associated with it, um and that index was different, it was something that we'd seen before in the loop.
+
+SPEAKER 0
+Well, guess what if we had used this approach every
+
+SPEAKER 1
+time we update results, we're actually changing in Puerto Rey
+
+SPEAKER 2
+Right. So it may not have these are aliases to the
+
+SPEAKER 1
+same thing in memory.
+
+SPEAKER 0
+Right.
+
+SPEAKER 2
+It's just a reference to an existing object in memory.
+
+SPEAKER 0
+So for most of the time I think you should when you're doing a question like this, unless you're asked
+
+SPEAKER 1
+to modify the existing array and I'll be explicit about
+
+SPEAKER 0
+that.
+
+SPEAKER 1
+Make a new one and put your result into the
+
+SPEAKER 2
+new one. Okay, now if you're using random like we did with
+
+SPEAKER 1
+swap that situation, you don't want to do that because
+
+SPEAKER 2
+um of all the hundreds of times I answered that question on the discord, I'm not gonna answer again. Okay, so now I can play that and okay, my fonts to two massive here, but let me see, can I scroll over?
+
+SPEAKER 0
+So this, have I got a scroll bar here? Oh my goodness, okay, anyway, here's where you can do
+
+SPEAKER 2
+that, I think it's just wrapped around.
+
+SPEAKER 0
+Um Alright, so did I get the right answer here? The 2nd 1 looks right.
+
+SPEAKER 2
+The first one, for some reason is showing two, I'm not sure why that is. Did I maybe I my test cases wrong?
+
+SPEAKER 0
+Can anyone see why that is? You have the opportunity once? Sorry, Where? Oh yeah, I was talking about something else and I
+
+SPEAKER 1
+forgot. Ok, there you go.
+
+SPEAKER 0
+So of course I did that on purpose because what
+
+SPEAKER 1
+I show you what I wanted to show you was that you might have accident, you might have accidentally Hit
+
+SPEAKER 0
+a key. two. Right, who's done that before, but it didn't cause an error and then you get this logical error.
+
+SPEAKER 1
+And then so the test is supposed to pick that
+
+SPEAKER 2
+up for you, so on expected we see what we're
+
+SPEAKER 0
+supposed to be getting as output and on the actual
+
+SPEAKER 2
+this is what we're actually getting, it's wrapping around, but it's two's okay, so that's not good, but it worked for the other one. Right, okay, because the first element was still the first element. This one is not the last element, is it? So let's change that and run it again.
+
+SPEAKER 0
+Okay now we've got the right answers.
+
+SPEAKER 2
+I think I'm not gonna bring the front down to do that, but that's the idea.
+
+SPEAKER 0
+Okay, so um yeah okay he's doing the cheesy easy
+
+SPEAKER 2
+one. Um All right, so this one's a little bit so
+
+SPEAKER 0
+you'll have an array question that has to do with
+
+SPEAKER 2
+um a string in some fashion.
+
+SPEAKER 0
+Okay, strings are a bit different from a raise or
+
+SPEAKER 1
+you'll have an array. That's numeric.
+
+SPEAKER 2
+You may have something that's a string or a character
+
+SPEAKER 1
+if you're not comfortable with strings.
+
+SPEAKER 0
+Right?
+
+SPEAKER 1
+Because the way that you traverse strings is a little
+
+SPEAKER 0
+bit different. Okay, it's the way you traverse is the same.
+
+SPEAKER 1
+The way that you rip is the same.
+
+SPEAKER 2
+Sorry? Discord. Um But the way that you um access elements is
+
+SPEAKER 0
+different.
+
+SPEAKER 1
+So it's not an array first of all.
+
+SPEAKER 0
+Okay, A string is not an array.
+
+SPEAKER 1
+So um in this particular question we're just taking the
+
+SPEAKER 0
+first four characters from the front and we're going to
+
+SPEAKER 1
+repeat them but we're going to repeat them until and take one away from that until we get down to
+
+SPEAKER 2
+just a single character.
+
+SPEAKER 0
+Okay, I'll let you work on that one, it's not
+
+SPEAKER 2
+hard.
+
+SPEAKER 0
+Um Right so this one just takes the first two
+
+SPEAKER 1
+characters.
+
+SPEAKER 2
+So it's got the first two characters then won the first one character of that and so on.
+
+SPEAKER 0
+But um length for instance, you've got a clue here.
+
+SPEAKER 1
+You need a method for it.
+
+SPEAKER 0
+So in the same way that we're talking about images using get and set like for strings. Remember you need a method to get the element at
+
+SPEAKER 1
+a certain position in the string.
+
+SPEAKER 2
+What's the method called?
+
+SPEAKER 0
+Chart at? Right.
+
+SPEAKER 1
+Okay. So here's what you do when you don't remember.
+
+SPEAKER 2
+Okay right click on the string type.
+
+SPEAKER 0
+Did we lose our video recording? What happened there? Oh here we go.
+
+SPEAKER 2
+I don't know if it's still recording. Hang on a second.
+
+SPEAKER 0
+Yeah, it's still recording. It was just glitch ng out.
+
+SPEAKER 2
+Okay so right click on here and go to find in reference. That's what happened. We lost the screen share. Okay. Okay we're back.
+
+SPEAKER 0
+Is that good? No, you can't see the screen. What happened?
+
+SPEAKER 2
+See this is why I don't rely on zoom when everyone's connecting in the room. Where's jim? Did jim go away?
+
+SPEAKER 0
+Okay that's what happened. I pulled the cable. Okay? Hang on. No no it's alright. That's why.
+
+SPEAKER 2
+Yeah, because it changed my resolution a little bit.
+
+SPEAKER 0
+Um I thought I can see again. Alright I think it's still recording. Right?
+
+SPEAKER 1
+And can you see it now?
+
+SPEAKER 0
+Who's on it?
+
+SPEAKER 1
+Can you can answer? Can you see it? Yes.
+
+SPEAKER 2
+Okay. Perfect. Okay good.
+
+SPEAKER 1
+Thanks Anson, you're now fully featured in a video series.
+
+SPEAKER 0
+Okay. Um All right, so just right click on the type, right and the same thing goes for methods. Okay.
+
+SPEAKER 2
+Um Sorry this I'd left a spurious word in here but we don't need that. Um Okay, so the return type here um we go
+
+SPEAKER 1
+to the reference.
+
+SPEAKER 2
+Okay look down at the reference and you'll see all the methods and you'll see there's a method chart at. So just be familiar with how you work work with
+
+SPEAKER 1
+a string. Be familiar with at least these methods.
+
+SPEAKER 0
+Okay.
+
+SPEAKER 1
+I'm not going to there are many other methods that
+
+SPEAKER 2
+are available for strings as well.
+
+SPEAKER 0
+Um Generally what happens is when you're working with a
+
+SPEAKER 2
+reference and you press dot okay.
+
+SPEAKER 1
+Usually it'll pop up in processing.
+
+SPEAKER 0
+Um it doesn't always happen for but for built in
+
+SPEAKER 1
+stuff it usually does.
+
+SPEAKER 0
+Um and you'll see there's like a ton more methods here.
+
+SPEAKER 2
+There's a ton. Okay. That are available.
+
+SPEAKER 1
+You can't see it. I can barely see it because it's very small font
+
+SPEAKER 0
+but when you're working in the lab you can see
+
+SPEAKER 2
+in there and you can sort of pick one of the characters, one of the methods and it will complete it for you. Okay? Um but char at what this is expecting an integer. Right? So if I do a loop here, I'm not going
+
+SPEAKER 1
+to answer this question fully but if I do a
+
+SPEAKER 2
+loop here over I to get the character in the string, I do this right now if you're you're not
+
+SPEAKER 1
+comfortable working with string in its object form.
+
+SPEAKER 0
+Don't worry.
+
+SPEAKER 1
+There's an object question And the 4th question where you have to work with an object but if you want to, if you don't want to work with an object for the string question, then there is a method to
+
+SPEAKER 2
+char array which will convert that into a char array, my letters, whatever it is.
+
+SPEAKER 0
+Okay.
+
+SPEAKER 2
+Uh or you know, let's call it my stream my version of this string that's coming in so I can create a char array and work with it because I'm comfortable with working with a race.
+
+SPEAKER 0
+Okay now when you're working with a raise again, these
+
+SPEAKER 1
+are chars.
+
+SPEAKER 0
+So you have to assign them chars. Okay?
+
+SPEAKER 2
+And you have if you want to get one of the values out, you have to assign it to a char as well. So if I was getting the first and last character
+
+SPEAKER 1
+here, I don't have to do that for this question.
+
+SPEAKER 2
+But if I was doing that for this question, you
+
+SPEAKER 0
+know, child first, you know, it would be equal to
+
+SPEAKER 2
+Sorry, my str. Right. Um And Then the 1st element.
+
+SPEAKER 0
+Right? So if you're more comfortable working with arrays, convert your
+
+SPEAKER 1
+string into an array.
+
+SPEAKER 0
+There's a lot of convenient things we can do with
+
+SPEAKER 2
+this string though.
+
+SPEAKER 0
+Um I'm not going to fully answer That question.
+
+SPEAKER 2
+I want you to try that one out. Um What I do want to do is switch over
+
+SPEAKER 0
+to where we're going for time. Not great As usual in our sub 60 minute lecture.
+
+SPEAKER 2
+Um Alright so let's go back to um the second practice test right? And I'm gonna work on this question. Um Oh the last question here is going to involve an object um that you've worked with and I think up to week seven, Week eight or whatever this range that I said this test was gonna be on. We only worked with vectors. P vector.
+
+SPEAKER 1
+Yay for all the people who don't like vectors.
+
+SPEAKER 0
+Now, if you don't like vectors and you don't understand
+
+SPEAKER 2
+vector math, don't worry um I'm gonna tell you what I want you to do.
+
+SPEAKER 0
+Okay this is not a math test, this is in
+
+SPEAKER 1
+the same way that some of you are going, oh my goodness! Like the last lab test was I didn't understand the math for the there Were there were two Questions, one
+
+SPEAKER 2
+was forced between two charged particles and one was the force between two like between two planets.
+
+SPEAKER 0
+Okay, it's exactly the same formula.
+
+SPEAKER 2
+Actually. The what? The values are slightly different but um and one of them is always attractive and the other one depends on the charge.
+
+SPEAKER 0
+So um if you're looking at that and you look
+
+SPEAKER 1
+at a formula for something and go oh my God
+
+SPEAKER 2
+I didn't I don't remember this from high school physics or I never touched this or I never it's irrelevant.
+
+SPEAKER 1
+It's as irrelevant as the sine wave is for the audio lab.
+
+SPEAKER 0
+Okay what's relevant is that there is a method you
+
+SPEAKER 1
+call to generate the sine wave and I'm going to give you the formula.
+
+SPEAKER 0
+Okay. And so you look for the method, what you're, what
+
+SPEAKER 1
+you're learning here is how to call the methods and put them together to implement that code, not whether you
+
+SPEAKER 2
+are a guru at using sine waves, right, or a guru a using vectors.
+
+SPEAKER 0
+So the point here in this question is that and
+
+SPEAKER 1
+it's very explicit. So if you don't read it, you're gonna miss it. That is that this is the some of these things is of some of vectors, right?
+
+SPEAKER 0
+It's a vector sum. Right?
+
+SPEAKER 1
+The angle is angle between vectors.
+
+SPEAKER 0
+I don't expect you to know how to calculate that
+
+SPEAKER 2
+necessarily. What I expect you to do if it's working on
+
+SPEAKER 1
+an object is to go and look at the reference for that object.
+
+SPEAKER 0
+Okay. So the reference for that object, I don't know where
+
+SPEAKER 2
+my reference manuals gone. Now, let's go back here.
+
+SPEAKER 0
+Here we go back there. Okay, go to the reference. There are methods. Look at that. Look at that.
+
+SPEAKER 2
+There's a method called add. We've looked at that subtract, we've looked at that.
+
+SPEAKER 0
+Um I've given you visualizations of what's happening because I
+
+SPEAKER 2
+assume that most of you have seen vectors before, but if you haven't, there's a visualization for you what's going on, but don't worry about that um because I'm telling
+
+SPEAKER 1
+you explicitly what I want you to build.
+
+SPEAKER 0
+Okay, this is about whether you can use objects or
+
+SPEAKER 2
+not, angle between calculate the angle between. So there's a method here.
+
+SPEAKER 0
+The angles in radiance. Okay. But I'm in the question I'm actually asking for the
+
+SPEAKER 1
+angle between these two vectors and I give you these two vectors, I give you the X and Y components.
+
+SPEAKER 0
+Right? So the method that you've got to work with has
+
+SPEAKER 1
+the X.
+
+SPEAKER 0
+I think the method name is different from the one
+
+SPEAKER 2
+on the question but anyway you get the idea. Okay, I had to coddle these things together, sample things but they're if the method name is different, it won't
+
+SPEAKER 1
+be like that on the test hopefully.
+
+SPEAKER 2
+Okay, I would have proofread it a lot.
+
+SPEAKER 0
+Um But if it is then um just change the
+
+SPEAKER 2
+name or don't or just use the method that's here.
+
+SPEAKER 0
+I'm giving you points right in X and Y coordinates.
+
+SPEAKER 1
+But I'm asking you the question to make vectors of these objects and then calculate the midpoint and that midpoint
+
+SPEAKER 2
+has to be a vector.
+
+SPEAKER 0
+Right?
+
+SPEAKER 1
+So I tell you how to do the midpoint.
+
+SPEAKER 0
+Okay, I don't expect you to I mean it's it's
+
+SPEAKER 2
+very simple, it's not rocket science here for this type of thing, but if you if you're worried about that,
+
+SPEAKER 0
+just look at the steps, read the question.
+
+SPEAKER 1
+I tell you exactly what I want you to do
+
+SPEAKER 2
+in the question, I'm not expecting you to know the math behind it necessarily. Okay. Alright um let's get to an interesting question here. Okay so this is a little bit harder question.
+
+SPEAKER 0
+Right so the practice test b had a slightly harder
+
+SPEAKER 2
+sort of question to it and question one wasn't just
+
+SPEAKER 0
+oh there's a little bit of a glitch here, this
+
+SPEAKER 2
+is just an arrow supposed to be. Um But so the first one um Okay, generate a
+
+SPEAKER 1
+Mac address, generate a random Mac address.
+
+SPEAKER 0
+I keep doing that, keep pulling the cable out. So what's a Mac address that sort of explains here that um sorry not a Mac address? A hex address? Okay. Hex address just has two digit hex numbers. Right?
+
+SPEAKER 1
+We know what the hex number is um that are
+
+SPEAKER 0
+separated by Collins.
+
+SPEAKER 1
+So if there's a six value hex number, it's got
+
+SPEAKER 0
+six sets of these two digits.
+
+SPEAKER 1
+Again, do you have to understand how to convert hex to binary? No. Um but you do have to understand that a hex
+
+SPEAKER 0
+digit is either 0-9.
+
+SPEAKER 1
+I'll probably have that in the question guys, I think you're a bit early for the next class.
+
+SPEAKER 2
+We've still got six minutes.
+
+SPEAKER 0
+Okay. No worries. Um And okay so we take this um we want
+
+SPEAKER 1
+to generate this but we want to generate it randomly.
+
+SPEAKER 0
+Okay so let's um I don't have some starter code
+
+SPEAKER 1
+for this but let's just start a new sketch to
+
+SPEAKER 2
+have a look at that.
+
+SPEAKER 0
+So how would you do that?
+
+SPEAKER 2
+And I'm just gonna do it in a method, what was it called, gen Mac address? Okay, Okay. And I've got up two end numbers, so how would
+
+SPEAKER 1
+I do that? Like how would you do that?
+
+SPEAKER 0
+How would you pick?
+
+SPEAKER 1
+Just give me a strategy you want to generate?
+
+SPEAKER 0
+So you need a colon between these things, so we
+
+SPEAKER 1
+need a loop.
+
+SPEAKER 0
+Do we need an array?
+
+SPEAKER 1
+We don't need an array.
+
+SPEAKER 0
+Right, But I'll tell you where an array is useful.
+
+SPEAKER 1
+How are you going to populate with the right digit?
+
+SPEAKER 0
+How Would you pick a value?
+
+SPEAKER 1
+That's between zero nine, yep.
+
+SPEAKER 2
+Yeah, so okay, and this is what I'm getting at.
+
+SPEAKER 1
+So if you had a string could be useful here because we're building we're building string value here, Right?
+
+SPEAKER 2
+We're building characters. Or I could, if you're not comfortable with that, I could have a char array um numbers equals, and I could create one.
+
+SPEAKER 0
+Okay, um or it could have an integer array, I'm
+
+SPEAKER 2
+gonna do characters because a string ultimately it depends how we're going to put together this thing, but um so I could go from zero, right, I could initialize an
+
+SPEAKER 1
+array like this.
+
+SPEAKER 0
+Okay, I don't really need one for this question, but
+
+SPEAKER 2
+anyway, imagine you do that and you do another one
+
+SPEAKER 1
+for the letters.
+
+SPEAKER 0
+Okay, so so you could or you could put them
+
+SPEAKER 1
+all together.
+
+SPEAKER 2
+Right, so one, 23.
+
+SPEAKER 0
+Uh huh. 56.
+
+SPEAKER 2
+Oops. I'm missing some things here.
+
+SPEAKER 0
+Right, um you know, let's get some stuff here and
+
+SPEAKER 2
+then just put so a. And then up to f.
+
+SPEAKER 0
+Right, so if you put them in there, what's the
+
+SPEAKER 1
+index are they gonna be? What's The Index of nine Gonna Be?
+
+SPEAKER 0
+What's The Index of zero going to be? Let's start there. zero. Not 1.
+
+SPEAKER 1
+Index zero starts from zero.
+
+SPEAKER 0
+What's The Index of nine Gonna be?
+
+SPEAKER 1
+So they're going to follow The numbers right?
+
+SPEAKER 2
+0123 nine.
+
+SPEAKER 1
+Okay. So what's the index of a gonna be 10?
+
+SPEAKER 0
+Right. So does it matter does it matter if I create
+
+SPEAKER 1
+an array like this?
+
+SPEAKER 0
+Right, so let's just create one that goes up to
+
+SPEAKER 1
+here. It doesn't have all the letters that we need.
+
+SPEAKER 2
+Right. But just just for time's sake, how do I pick
+
+SPEAKER 1
+a random character from it?
+
+SPEAKER 0
+Random on what? So my random character, my first random character is numbers.
+
+SPEAKER 2
+How do I pick that? Index random on what what range numbers dot length.
+
+SPEAKER 0
+I could populate that with any number of characters.
+
+SPEAKER 1
+Doesn't matter.
+
+SPEAKER 0
+So I pick on that.
+
+SPEAKER 2
+Okay, but I've got an error here because why? Because it's returning a float. So I converted to an integer so I can pick
+
+SPEAKER 1
+any other characters there if you want to test whether a character that you're looking for exists in um in
+
+SPEAKER 2
+your array.
+
+SPEAKER 0
+Some some problem like that. It's very easy to um have the characters that you
+
+SPEAKER 2
+want to restrict to set up as an array and you can just sort of see whether the character that
+
+SPEAKER 1
+you're looking at in a string exists in that array
+
+SPEAKER 2
+or not.
+
+SPEAKER 0
+Right? Or you can put it as a string.
+
+SPEAKER 1
+There's a method in the string that can see uh what index does that character occur at and it returns
+
+SPEAKER 2
+and and this is in the string help.
+
+SPEAKER 0
+Okay.
+
+SPEAKER 2
+Um if I go into the string help, there's one called index of returns the index of a character in where it occurs in the string.
+
+SPEAKER 0
+Okay? Um and but if it doesn't occur in the string,
+
+SPEAKER 2
+it returns minus one, which is not a valid index
+
+SPEAKER 1
+but you have a way of knowing whether or not.
+
+SPEAKER 2
+So remember that question we did where at the end
+
+SPEAKER 1
+of the last lab test we had to check whether it was a consonant or a vowel.
+
+SPEAKER 0
+Right?
+
+SPEAKER 1
+And you have to test all of the different ones. Well, here's an easier way to do it have all of the things you're looking for in a in a storage array and then just look to see whether your current character is in there or not.
+
+SPEAKER 0
+If it gives a -1 index, it's not in there,
+
+SPEAKER 1
+then it's not one of the characters you're looking for and you don't have to do all of these um
+
+SPEAKER 2
+uh and things in your if if tests.
+
+SPEAKER 0
+Okay.
+
+SPEAKER 1
+Um I think we we've run out of time unfortunately.
+
+SPEAKER 0
+But I can I can do a video that walks
+
+SPEAKER 1
+through some of the harder questions here and post it up. Have a go at them.
+
+SPEAKER 0
+The, the harder one in this, um, test B is
+
+SPEAKER 1
+the one after this. This one just generates the number random. Pretty easy. You'd have to loop over it six times. Put your semicolons in the second one is a bit harder. This is to test whether or not the string is valid Mac or not.
+
+SPEAKER 0
+Okay, So have a go at those.
+
+SPEAKER 1
+I'll do a video of those ones and then we
+
+SPEAKER 0
+can regroup on monday.
