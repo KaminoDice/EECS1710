@@ -33,8 +33,8 @@ void setup() {
   size(640, 480);
   generateTarget();
   
-  musicGame = new SoundFile(this,"awesomeness.wav");
-  musicEnd = new SoundFile(this,"song18.mp3");
+  //musicGame = new SoundFile(this,"awesomeness.wav");
+  //musicEnd = new SoundFile(this,"song18.mp3");
   
   effect = new SoundFile(this,"pain.wav");
   music.loop();
