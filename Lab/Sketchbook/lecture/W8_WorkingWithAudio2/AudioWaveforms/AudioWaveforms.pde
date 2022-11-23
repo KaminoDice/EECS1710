@@ -37,14 +37,14 @@ void setup() {
  
   
   //waveform = addWaveforms(waveform1,0.5,waveform2,0.5);    // dyad - two close tones - beats effect)
-  waveform = addWaveforms(waveform1,0.9,waveform3,0.1);    // tone + noise
+  //waveform = addWaveforms(waveform1,0.9,waveform3,0.1);    // tone + noise
   
   //waveform = addWaveforms(waveform1b,0.5,waveform1c,0.5);
   //waveform = addWaveforms(waveform,0.5,waveform1d,0.5);    // adds twice (creates a harmonic - all freqs are multiples of 440)
   
   //waveform = articulateWaveform(waveform1,"LEGATO");
   //waveform = articulateWaveform(waveform1,"STECCATO");
-  //waveform = articulateWaveform(waveform1,"DECAY");
+  waveform = articulateWaveform(waveform1,"DECAY");
  
   //waveform = tremolo(440, 4, numSamples);
   
