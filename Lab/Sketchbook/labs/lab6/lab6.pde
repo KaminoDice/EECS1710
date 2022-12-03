@@ -21,10 +21,10 @@
 
 void setup() {
   
-  size(500,500);          // size for question 2
-  
+  //size(500,500);          // size for question 2
+  //size(500,354);
   //size(450,900);        // size for 3 images of "temple.jpg" (question 3)
-  //size(640,1080);       // size for 3 images of "yogaBike.jpg" (question 3)
+  size(640,1080);       // size for 3 images of "yogaBike.jpg" (question 3)
   
   
   surface.setTitle("lab6");
@@ -34,7 +34,7 @@ void setup() {
  
   //question1();
   //question2();
-  //question3();
+  question3();
 
   
 }

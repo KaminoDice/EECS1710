@@ -1,6 +1,6 @@
 // Lab 6 - lab6.pde
 // ======================================
-// Student ID: 
+// Student ID:
 // First Name:
 // EECS User Name (not password):
 // ======================================
@@ -34,26 +34,28 @@ void question1() {
   println("showCartesianCoords(7, 9):");
   showCartesianCoords(7, 9);
   println();
-
-
 }
 
 
 void showImageCoords(int imgWidth, int imgHeight) {
 
   // METHOD TO COMPLETE
-  
-  
-  
-  
+  for (int i=0; i<imgHeight; i++) {
+    for (int j=0; j<imgWidth; j++) {
+      print("( "+ j + ", "+i+") ");
+    }
+    println();
+  }
 }
 
 
 void showCartesianCoords(int imgWidth, int imgHeight) {
 
   // METHOD TO COMPLETE
-  
-  
-  
-  
+  for (int i=imgHeight; i>0; i--) {
+    for (int j=0; j<imgWidth; j++) {
+      print("( "+ j + ", "+ (i-1) +") ");
+    }
+    println();
+  }
 }
